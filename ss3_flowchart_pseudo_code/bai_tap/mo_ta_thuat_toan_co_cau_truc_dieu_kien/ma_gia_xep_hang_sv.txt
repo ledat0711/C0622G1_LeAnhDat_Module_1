@@ -1,0 +1,18 @@
+Begin
+     Input diem
+     If (diem >=75) then 
+          Display "Loai A''
+     End if
+     If (diem>=60) then 
+          Display "Loai B''
+     End if
+     If (diem >=45) then 
+          Display "Loai C''
+     End if
+     If (>=35) then 
+          Display "Loai D''
+     End if
+     If (diem>35) then 
+          Display "Loai E''
+     End if
+End
