@@ -1,0 +1,5 @@
+Begin
+     Input Toan, Ly, hoa
+     DTB=(Toan + Ly + Hoa)
+     Display DTB
+End
