@@ -1,5 +1,5 @@
 Begin
-     Input Toan, Ly, hoa
-     DTB=(Toan + Ly + Hoa)
+     Input T, L, H
+     DTB=(T + L + H)/3
      Display DTB
 End

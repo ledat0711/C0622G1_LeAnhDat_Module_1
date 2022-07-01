@@ -1,7 +1,7 @@
 Begin
      Input USD
-     TyGia = 23000
-     VND = DL*TyGia
+     tyGia = 23000
+     VND = TyGia*USD
      Display VND
 End
      
