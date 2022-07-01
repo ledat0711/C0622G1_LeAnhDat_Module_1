@@ -9,7 +9,7 @@ Begin
      If (diem >=45) then 
           Display "Loai C''
      End if
-     If (>=35) then 
+     If (diem>=35) then 
           Display "Loai D''
      End if
      If (diem>35) then 
