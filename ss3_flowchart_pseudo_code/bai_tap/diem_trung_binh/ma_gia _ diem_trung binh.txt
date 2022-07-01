@@ -2,4 +2,4 @@ Begin
      Input T, L, H
      DTB=(T + L + H)/3
      Display DTB
-End
+Finish
