@@ -19,7 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2be25a5-4da7-4b45-9461-4ab132d3c1c0" name="Default Changelist" comment="" />
+    <list default="true" id="293768db-20e8-463e-b4fd-a4a8e3c3b2e4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../bai_3_tao_form_lay_survey_khach_hang/.idea/bai_3_tao_form_lay_survey_khach_hang.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_3_tao_form_lay_survey_khach_hang/form_survey_khach_hang.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_3_tao_form_lay_survey_khach_hang/thunghiem.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bai_4_tao_bang_don_gian/tao_bang_don_gian.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_2b_tao_form_dk_hoc_vien/bai_2b_tao_form_dk_hoc_vien.html" beforeDir="false" afterPath="$PROJECT_DIR$/../bai_2b_tao_form_dk_hoc_vien/bai_2b_tao_form_dk_hoc_vien.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bai_4_tao_bang_don_gian/.idea/workspace.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +42,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="ProjectId" id="2BTGKePeXA4JA09es5dsTKPaChv" />
+  <component name="ProjectId" id="2BUScEZVpLgYCCZk9SqyywEupPQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -52,12 +59,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c2be25a5-4da7-4b45-9461-4ab132d3c1c0" name="Default Changelist" comment="" />
-      <created>1656922598337</created>
+      <changelist id="293768db-20e8-463e-b4fd-a4a8e3c3b2e4" name="Default Changelist" comment="" />
+      <created>1656959247970</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1656922598337</updated>
-      <workItem from="1656922599642" duration="186000" />
+      <updated>1656959247970</updated>
+      <workItem from="1656959249174" duration="1334000" />
     </task>
     <servers />
   </component>
@@ -76,9 +83,9 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="459" y="106" key="FileChooserDialogImpl" timestamp="1656922784215">
-      <screen x="0" y="0" width="1360" height="728" />
+    <state x="462" y="106" key="FileChooserDialogImpl" timestamp="1656960601690">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="459" y="106" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1656922784215" />
+    <state x="462" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1656960601690" />
   </component>
 </project>
