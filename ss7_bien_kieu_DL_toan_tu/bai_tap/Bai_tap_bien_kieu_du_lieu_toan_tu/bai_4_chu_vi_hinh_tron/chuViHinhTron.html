@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuViHinhTron</title>
+</head>
+<body>
+<form>
+    <p>
+        <label>Nhap ban kinh R:</label>
+        <input id="nhapR" type="number" placeholder="Nhap ban kinh R vao day"
+               oninput="tinhChuVi(this.value)"
+        >
+    </p>
+    <p>Chu Vi bang: <span id="dauRaChuVi"></span></p>
+</form>
+</body>
+</html>
+<script>
+    function tinhChuVi(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("dauRaChuVi").innerHTML = (valNum*2*3.14);
+    }
+</script>

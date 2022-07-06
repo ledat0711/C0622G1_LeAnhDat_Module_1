@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ung Dung Doi Tien</title>
+</head>
+<body>
+<table name="abc">
+    <tr><td colspan="4"><h2 style="text-align: center">VND<=>KRW</h2></td> </tr>
+    <tr>
+        <th><label for="Amount">Nhập vào số tiền</label></th>
+        <th>Loại tiền đầu vào</th>
+        <th>Loại tiền đầu ra</th>
+        <th></th>
+    </tr>
+    <tr>
+        <td><input type="text" name="amount" id="Amount"></td>
+        <td>
+            <select id="From">
+                <option value="VND">VietNam</option>
+                <option value="KRW">KRW</option>
+            </select>
+        </td>
+        <td>
+            <select id="To">
+                <option value="VND">VietNam</option>
+                <option  value="KRW">KRW</option>
+            </select>
+        </td>
+        <td><button onclick="ChangeMoney()">Chuyển Đổi</button></td>
+    </tr>
+</table>
+<br>
+</body>
+</html>
+<script src="ungDungChuyenDoiTienTe.js"></script>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyenDoiNhietDo</title>
+</head>
+<body>
+<form>
+    <p>
+        <label>Nhap do C:</label>
+        <input id="nhapDoC" type="number" placeholder="Nhap do C vao day"
+               oninput="chuyenDoiNhietDo(this.value)"
+               >
+    </p>
+    <p>Ket qua do F: <span id="outputDoF"></span></p>
+</form>
+</body>
+</html>
+<script>
+    function chuyenDoiNhietDo(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("outputDoF").innerHTML = (valNum*1.8+32);
+    }
+</script>

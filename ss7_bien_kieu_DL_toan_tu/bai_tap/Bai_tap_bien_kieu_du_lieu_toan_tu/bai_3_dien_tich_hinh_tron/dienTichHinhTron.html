@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinhDienTichHinhTron</title>
+</head>
+<body>
+<form>
+    <p>
+        <label>Nhap ban kinh R:</label>
+        <input id="nhapR" type="number" placeholder="Nhap ban kinh R vao day"
+               oninput="tinhDienTich(this.value)"
+        >
+    </p>
+    <p>Dien Tich: <span id="dauRaDienTich"></span></p>
+</form>
+</body>
+</html>
+<script>
+    function tinhDienTich(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("dauRaDienTich").innerHTML = (valNum*valNum*3.14);
+    }
+</script>
