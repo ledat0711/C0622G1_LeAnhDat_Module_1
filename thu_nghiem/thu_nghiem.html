@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="viTri1" type="text"></p><br>
+<input id="viTri2" type="text"><br>
+<button onclick="innerHTMLNhapTuBienKhac()">nut hien thi A</button>
+<button onclick="innerHTMLGanChoBienKhac()">nut hien thi B</button>
+
+</body>
+</html>
+<script>
+    function innerHTMLNhapTuBienKhac() {
+        let bien1 = 1;
+        document.getElementById("viTri1").value = bien1;
+    }
+    function innerHTMLGanChoBienKhac(){
+        let bien2 = document.getElementById("viTri1").innerHTML;
+    }
+    // function layGiaTri(){
+    //     let giaTri1 = document.getElementById("viTri2").value;
+    //     alert(giaTri1)
+    // }
+    // thuNghiem()
+    // function thuNghiem() {
+    //     document.getElementById("viTri1").value = 12;
+    //
+    // }
+</script>
