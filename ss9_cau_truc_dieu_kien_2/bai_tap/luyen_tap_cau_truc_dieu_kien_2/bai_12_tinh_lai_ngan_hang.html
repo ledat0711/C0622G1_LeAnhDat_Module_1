@@ -11,18 +11,18 @@
     <label for="soThangIn">Nhập số tháng vay</label>
     <input type="number" id="soThangIn" name="soThangIn">
     <label for="soThangIn">tháng.</label><br><br>
-    <button onclick="laiNganHang(Number(tienIn.value), Number(soThangIn.value))">Tính khoản tiền phải trả</button>
+    <button onclick="tienNganHang(Number(tienIn.value), Number(soThangIn.value))">Tính khoản tiền phải trả</button>
     <br><br>
     <output id="out"></output>
 </body>
 <script>
-    function laiNganHang(tienBanDau, soThang){
+    function tienNganHang(tienBanDau, soThang){
         let tienCuoiCung;
         parseFloat(tienCuoiCung);
         for ( i = 0 ; i < soThang ; i++ ) {
             tienBanDau = tienBanDau + (tienBanDau*6/100);
         }
-        document.getElementById('out').value='Hết thời hạn bạn phải trả số tiền: ' + tienBanDau.toFixed(2) + ' VND.';
+        document.getElementById('out').value='Hết thời hạn, bạn phải trả số tiền: ' + tienBanDau.toFixed(2) + ' VND.';
     }
 </script>
-</html>-
+</html>
