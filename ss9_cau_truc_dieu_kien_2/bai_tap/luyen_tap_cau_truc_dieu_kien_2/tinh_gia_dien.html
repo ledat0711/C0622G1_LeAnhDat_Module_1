@@ -7,11 +7,12 @@
 <body>
     <label for="soChu1">Nhập số chữ điện:</label>
     <input type="number" id="soChu1" name="soChu1">
-    <input type="button" value="Tính tiền điện" onclick="tienDien(soChu1.value)">
+    <input type="button" value="Tính tiền điện" onclick="tienDien(Number(soChu1.value))">
     <p id="out"></p>
 </body>
 <script>
     function tienDien(soChu) {
+        let money;
         if (soChu>200){
             money=(soChu-200)*2000 + 1000*200;
         }else{

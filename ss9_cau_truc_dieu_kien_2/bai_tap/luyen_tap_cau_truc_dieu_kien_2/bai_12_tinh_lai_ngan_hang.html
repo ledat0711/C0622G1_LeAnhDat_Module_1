@@ -17,12 +17,10 @@
 </body>
 <script>
     function tienNganHang(tienBanDau, soThang){
-        let tienCuoiCung;
-        parseFloat(tienCuoiCung);
-        for ( i = 0 ; i < soThang ; i++ ) {
+        for ( let i = 0 ; i < soThang ; i++ ) {
             tienBanDau = tienBanDau + (tienBanDau*6/100);
         }
-        document.getElementById('out').value='Hết thời hạn, bạn phải trả số tiền: ' + tienBanDau.toFixed(2) + ' VND.';
+        document.getElementById('out').value='Hết thời hạn, bạn phải trả số tiền: ' + tienBanDau.toFixed(0) + ' VND.';
     }
 </script>
 </html>

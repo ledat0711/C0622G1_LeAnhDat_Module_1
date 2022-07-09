@@ -7,7 +7,7 @@
 <body>
     <label for="luong1">Nhập số tiền lương:</label>
     <input type="number" id="luong1" name="luong1"><label for="luong1"> (đơn vị: triệu VND)</label><br>
-    <input type="button" value="Tính thuế phải nộp" onclick="thue(luong1.value)">
+    <input type="button" value="Tính thuế phải nộp" onclick="thue(Number(luong1.value))">
     <p id="out"></p>
 </body>
 <script>

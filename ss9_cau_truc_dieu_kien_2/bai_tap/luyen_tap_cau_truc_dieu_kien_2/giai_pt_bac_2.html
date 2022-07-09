@@ -5,7 +5,6 @@
     <title>Title</title>
 </head>
 <body>
-<center>
     <p>Giải phương trình: ax<sup>2</sup> + bx + c =0 </p>
     <label for="aBody">Nhập a:</label>
     <input type="number" id="aBody" name="aBody"><br>
@@ -13,18 +12,14 @@
     <input type="number" id="bBody" name="bBody"><br>
     <label for="cBody">Nhập c:</label>
     <input type="number" id="cBody" name="cBody"><br>
-    <input type="button" value="Giải PT" onclick="giaiPTBac2(aBody.value, bBody.value, cBody.value)">
+    <input type="button" value="Giải PT" onclick="giaiPTBac2(Number(aBody.value), Number(bBody.value), Number(cBody.value))">
     <p id="outNghiem"></p>
-</center>
 </body>
 <script>
-    let aHam;
-    let bHam;
-    let cHam;
     function giaiPTBac1(bHam, cHam) {
-        if (bHam==0) {
-            if (cHam == 0) {
-                document.getElementById('outNghiem').innerHTML = 'Phương trình có vô số nghiệmm';
+        if (bHam===0) {
+            if (cHam === 0) {
+                document.getElementById('outNghiem').innerHTML = 'Phương trình có vô số nghiệm';
             } else {
                 document.getElementById('outNghiem').innerHTML = 'Phương trình vô nghiệm';
             }
@@ -34,7 +29,7 @@
         }
     }
     function giaiPTBac2(aHam, bHam, cHam) {
-        if (aHam == 0) {
+        if (aHam === 0) {
             giaiPTBac1(bHam, cHam);
         } else {
             let delta = Math.pow(bHam, 2) - 4 * aHam * cHam;
@@ -46,7 +41,7 @@
                 document.getElementById('outNghiem').innerHTML = ' Phương trình có 2 nghiệm: x<sub>1</sub>= '
                     + nghiemX1.toFixed(2) + ' và x<sub>2</sub>= ' + nghiemX2.toFixed(2);
             }else{
-                nghiemDuyNhat= -bHam/(2*aHam);
+                let nghiemDuyNhat= -bHam/(2*aHam);
                 document.getElementById('outNghiem').innerHTML = "Phương trình có nghiệm kép : x= "+nghiemDuyNhat;
             }
         }

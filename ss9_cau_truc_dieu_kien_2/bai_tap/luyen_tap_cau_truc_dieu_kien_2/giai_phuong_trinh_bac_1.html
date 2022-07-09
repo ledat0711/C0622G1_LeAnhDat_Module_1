@@ -10,17 +10,14 @@
     <input type="number" id="aBody" name="aBody"><br>
     <label for="bBody">Nhập b:</label>
     <input type="number" id="bBody" name="bBody"><br>
-    <input type="button" value="Giải PT" onclick="giaiPhuongTrinhBac1(aBody.value, bBody.value)">
+    <input type="button" value="Giải PT" onclick="giaiPhuongTrinhBac1(Number(aBody.value), Number(bBody.value))">
     <p id="nghiemPhuongTrinh"></p>
 </body>
 <script>
-    let aHam;
-    let bHam;
-
     function giaiPhuongTrinhBac1(aHam, bHam) {
-        if (aHam==0) {
-            if (bHam == 0) {
-                document.getElementById('nghiemPhuongTrinh').innerHTML = 'Phương trình có vô số nghiệmm';
+        if (aHam===0) {
+            if (bHam === 0) {
+                document.getElementById('nghiemPhuongTrinh').innerHTML = 'Phương trình có vô số nghiệm';
             } else {
                 document.getElementById('nghiemPhuongTrinh').innerHTML = 'Phương trình vô nghiệm'
             }
