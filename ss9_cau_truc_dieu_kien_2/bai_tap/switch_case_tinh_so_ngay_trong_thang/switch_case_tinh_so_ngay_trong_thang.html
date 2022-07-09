@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td style="text-align: center">
+                <label for="monthA">Nhập tháng: </label><br>
+                <input type="text" id="monthA">
+            </td>
+            <td style="text-align: center">
+                <label for="yearA">Nhập năm: </label><br>
+                <input type="text" id="yearA">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center">
+                <input value="Xem kết quả" type="button" onclick="checkMonth(Number(monthA.value), Number(yearA.value))"><br>
+                <p id="out1"></p>
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    let monthHere;
+    let yearHere;
+    function checkMonth(monthHere, yearHere) {
+        if((monthHere<=12 && monthHere>=1) && (yearHere>0)) {
+            switch (monthHere) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    document.getElementById('out1').innerHTML = 'Tháng ' + monthHere + ' năm ' + yearHere + ' có 31 ngày';
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    document.getElementById('out1').innerHTML = 'Tháng ' + monthHere + ' năm '+yearHere+' có 30 ngày';
+                    break;
+                case 2:
+                    if ((yearHere % 4 == 0 && yearHere % 100 != 0) || (yearHere % 400 == 0)) {
+                        document.getElementById("out1").innerHTML =
+                            'Năm '+yearHere+' là năm nhuận. '+
+                            'Tháng 2 năm ' + yearHere + ' có 29 ngày.';
+                    } else {
+                        document.getElementById("out1").innerHTML =
+                            'Năm ' + yearHere + ' không phải năm nhuận. ' +
+                            'Tháng 2 năm ' + yearHere + ' có 28 ngày.';
+                    }
+                    break;
+            }
+        }
+        else {
+            document.getElementById("out1").innerHTML = 'Nhập thông tin không hợp lệ. Vui lòng nhập lại.';
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KIỂM TRA CHIA HẾT</title>
+</head>
+<body>
+    <label for="a1">Nhập số a:</label><br>
+    <input type="number" id="a1" name="a1"><br>
+    <label for="b1">Nhập số b:</label><br>
+    <input type="number" id="b1" name="b1"><br>
+    <input value="Kiểm tra chia hết" type="button" onclick="Check(Number(a1.value), Number(b1.value))">
+    <p id="display0"></p>
+    <p id="display1"></p>
+</body>
+<script>
+    function Check(valueA,valueB) {
+        let c = valueA / valueB;
+        if( valueA % valueB == 0 ) {
+            document.getElementById('display0').innerHTML = 'Kết quả là '+ c.toFixed(2) + '.';
+            document.getElementById('display1').innerHTML = valueA +' chia hết cho '+ valueB + '.';
+        }else if(valueA % valueB !== 0) {
+            document.getElementById('display0').innerHTML = 'Kết quả là '+ c.toFixed(2) + '.';
+            document.getElementById('display1').innerHTML = valueA+' không chia hết cho '+valueB + '.';
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cuoc dien thoai</title>
+</head>
+<body>
+    <label for="minuteIn"> Nhập số phút gọi:</label>
+    <input type="number" id="minuteIn" name="minuteIn">
+    <label for="minuteIn"> phút.</label><br><br>
+    <input type="button" value="Tính tiền cước:" onclick="calculator(Number(minuteIn.value))">
+    <p id="moneyOut"></p>
+</body>
+<script>
+    function calculator(minute) {
+        let money;
+        if (minute > 300) {
+            money = (minute - 300) * 100 + 300 * 200;
+        } else {
+            money = minute * 200;
+        }
+        document.getElementById('moneyOut').innerHTML='Số tiền cước phải trả: '+ money+' VND';
+    }
+</script>
+</html>

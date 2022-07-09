@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp loại học sinh</title>
+</head>
+<body>
+    <h2>Xếp loại học lực học sinh:</h2>
+    <label for="a1">Nhập điểm kiểm tra: </label>
+    <input type="number" min="0" max="10" id="a1" name="a1"><br>
+    <label for="b1">Nhập điểm giữa kỳ: </label>
+    <input type="number" min="0" max="10" id="b1" name="b1"><br>
+    <label for="c1">Nhập điểm cuối kỳ: </label>
+    <input type="number" min="0" max="10" id="c1" name="c1"><br>
+    <input value="Kiểm tra xếp loại" type="button" onclick="xepLoai(Number(a1.value), Number(b1.value), Number(c1.value) )">
+</body>
+<script>
+    function xepLoai(kiemTra, giuaKy, cuoiKy) {
+        let tBC = (kiemTra + giuaKy + cuoiKy) / 3;
+        if (tBC >= 0 && tBC <= 10) {
+            if (tBC < 5) {
+                alert('Điểm trung bình: ' + tBC.toFixed(2) + ' . Học sinh xếp loại yếu');
+            } else if (tBC >= 5 && tBC < 7) {
+                alert('Điểm trung bình: ' + tBC.toFixed(2) + ' . Học sinh xếp loại trung bình');
+            } else if (tBC >= 7 && tBC < 8) {
+                alert('Điểm trung bình: ' + tBC.toFixed(2) + ' . Học sinh xếp loại khá');
+            } else if (tBC >= 8) {
+                alert('Điểm trung bình: ' + tBC.toFixed(2) + ' . Học sinh xếp loại giỏi');
+            }
+        }
+        else{
+            alert('Yêu cầu nhập lại.')
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="chieuDaiIn" >Nhập chiều dài a</label>
+    <input type="number" id="chieuDaiIn" name="chieuDaiIn">
+    <label for="chieuDaiIn" > met</label><br>
+    <input type="button" value="Tính diện tích" onclick="tinhDientich(chieuDaiIn.value)">
+    <p id="outDienTich"></p>
+</body>
+<script>
+    function tinhDientich(chieuDaiA) {
+        let dienTich=Math.pow(chieuDaiA, 2);
+        document.getElementById('outDienTich').innerHTML = 'Diện tích hình vuông bằng: ' + dienTich + ' m<sup>2</sup>';
+    }
+</script>
+</html>

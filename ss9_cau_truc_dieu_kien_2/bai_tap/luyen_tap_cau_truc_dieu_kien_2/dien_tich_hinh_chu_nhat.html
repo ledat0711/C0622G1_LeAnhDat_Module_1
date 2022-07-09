@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="chieuDaiIn" >Nhập chiều dài a</label>
+    <input type="number" id="chieuDaiIn" name="chieuDaiIn">
+    <label for="chieuDaiIn" > met</label><br>
+    <label for="chieuRongIn" >Nhập chiều rộng b</label>
+    <input type="number" id="chieuRongIn" name="chieuRongIn">
+    <label for="chieuRongIn" > met</label><br>
+    <input type="button" value="Tính diện tích" onclick="tinhDientich(chieuDaiIn.value, chieuRongIn.value)">
+    <p id="outDienTich"></p>
+</body>
+<script>
+    function tinhDientich(chieuDaiA, chieuRongB) {
+        let dienTich=chieuDaiA*chieuRongB;
+        document.getElementById('outDienTich').innerHTML = 'Diện tích hình chữ nhật bằng: '
+            + dienTich + ' m<sup>2</sup>';
+    }
+</script>
+</html>

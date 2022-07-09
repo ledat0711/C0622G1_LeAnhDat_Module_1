@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoa hong nhan duoc</title>
+</head>
+<body>
+    <h2>Hoa hồng nhận được</h2>
+    <label for="a1">Nhập tổng doanh số:</label>
+    <input type="number" id="a1" name="a1"> VND<br>
+    <input value="Tính toán tiền nhận được" type="button" onclick="tinhHoaHong(Number(a1.value))">
+    <p id="tien1"></p>
+</body>
+<script>
+    function tinhHoaHong(doanhSo) {
+        if(doanhSo>300000000) {
+            tien11 = doanhSo*20/100
+            document.getElementById('tien1').innerHTML = tien11.toFixed(2)+' VND là số tiền hoa hồng bạn nhận được '
+        }else if(doanhSo<=300000000){
+            tien22 = doanhSo*10/100
+            document.getElementById('tien1').innerHTML = tien22.toFixed(2)+' VND là số tiền hoa hồng bạn nhận được '
+        } else if(doanhSo<=100000000){
+            tien33 = doanhSo*5/100
+            document.getElementById('tien1').innerHTML = tien33.toFixed(2)+' VND là số tiền hoa hồng bạn nhận được '
+        }
+    }
+</script>
+</html>

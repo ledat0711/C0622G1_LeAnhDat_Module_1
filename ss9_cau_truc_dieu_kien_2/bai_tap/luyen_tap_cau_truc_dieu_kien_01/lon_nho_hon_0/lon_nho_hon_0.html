@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <label for="a1">Nhập số a:</label><br>
+    <input type="number" id="a1" name="a1"><br>
+    <input value="Kiểm tra số" type="button" onclick="Check(Number(a1.value))">
+    <p id="display0"></p>
+</body>
+<script>
+    function Check(valueA) {
+        if(valueA > 0){
+            document.getElementById('display0').innerHTML = valueA + ' lớn hơn 0';
+        }else if(valueA < 0){
+            document.getElementById('display0').innerHTML = valueA + ' nhỏ hơn 0';
+        }else {
+            document.getElementById('display0').innerHTML = 'Bạn đã nhập số 0';
+        }
+    }
+</script>
+</html>

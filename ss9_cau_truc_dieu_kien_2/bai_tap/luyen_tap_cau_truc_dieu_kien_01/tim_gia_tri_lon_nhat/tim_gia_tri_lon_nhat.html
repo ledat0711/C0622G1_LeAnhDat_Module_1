@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KIỂM TRA SỐ LỚN NHẤT</title>
+</head>
+<body>
+    <h2>Kiểm tra số lớn nhất trong 3 số</h2>
+    <label for="a1">Nhập số đầu tiên: </label>
+    <input type="number" id="a1" name="a1"><br>
+    <label for="b1">Nhập số thứ 2: </label>
+    <input type="number" id="b1" name="b1"><br>
+    <label for="c1">Nhập số thứ 3: </label>
+    <input type="number" id="c1" name="c1"><br>
+    <input value="Kiểm tra số" type="button" onclick="Check(Number(a1.value), Number(b1.value), Number(c1.value) )">
+    <p id="display0"></p>
+</body>
+<script>
+    function Check(soA, soB, soC) {
+        let max = Math.max(soA, soB, soC);
+        alert('Số lớn nhất là: ' + max);
+    }
+</script>
+</html>

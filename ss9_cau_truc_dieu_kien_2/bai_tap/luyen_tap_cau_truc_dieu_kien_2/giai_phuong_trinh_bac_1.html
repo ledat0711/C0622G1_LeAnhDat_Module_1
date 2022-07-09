@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>Giải phương trình: ax + b =0 </p>
+    <label for="aBody">Nhập a:</label>
+    <input type="number" id="aBody" name="aBody"><br>
+    <label for="bBody">Nhập b:</label>
+    <input type="number" id="bBody" name="bBody"><br>
+    <input type="button" value="Giải PT" onclick="giaiPTBac1(aBody.value, bBody.value)">
+    <p id="nghiemPT"></p>
+</body>
+<script>
+    let aHam;
+    let bHam;
+
+    function giaiPTBac1(aHam, bHam) {
+        if (aHam==0) {
+            if (bHam == 0) {
+                document.getElementById('nghiemPT').innerHTML = 'Phương trình có vô số nghiệmm';
+            } else {
+                document.getElementById('nghiemPT').innerHTML = 'Phương trình vô nghiệm'
+            }
+        }else{
+            let x = -bHam / aHam;
+            document.getElementById('nghiemPT').innerHTML = 'Phương trình có nghiệm: ' + x.toFixed(2);
+        }
+    }
+</script>
+</html>
