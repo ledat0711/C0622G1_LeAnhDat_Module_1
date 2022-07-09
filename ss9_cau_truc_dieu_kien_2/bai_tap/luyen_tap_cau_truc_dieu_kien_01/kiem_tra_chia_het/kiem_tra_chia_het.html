@@ -9,12 +9,12 @@
     <input type="number" id="a1" name="a1"><br>
     <label for="b1">Nhập số b:</label><br>
     <input type="number" id="b1" name="b1"><br>
-    <input value="Kiểm tra chia hết" type="button" onclick="Check(Number(a1.value), Number(b1.value))">
+    <input value="Kiểm tra chia hết" type="button" onclick="check(Number(a1.value), Number(b1.value))">
     <p id="display0"></p>
     <p id="display1"></p>
 </body>
 <script>
-    function Check(valueA,valueB) {
+    function check(valueA,valueB) {
         let c = valueA / valueB;
         if( valueA % valueB == 0 ) {
             document.getElementById('display0').innerHTML = 'Kết quả là '+ c.toFixed(2) + '.';

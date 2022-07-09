@@ -11,11 +11,11 @@
     <label for="chieuRongIn" >Nhập chiều rộng b</label>
     <input type="number" id="chieuRongIn" name="chieuRongIn">
     <label for="chieuRongIn" > met</label><br>
-    <input type="button" value="Tính diện tích" onclick="tinhDientich(chieuDaiIn.value, chieuRongIn.value)">
+    <input type="button" value="Tính diện tích" onclick="tinhDienTich(chieuDaiIn.value, chieuRongIn.value)">
     <p id="outDienTich"></p>
 </body>
 <script>
-    function tinhDientich(chieuDaiA, chieuRongB) {
+    function tinhDienTich(chieuDaiA, chieuRongB) {
         let dienTich=chieuDaiA*chieuRongB;
         document.getElementById('outDienTich').innerHTML = 'Diện tích hình chữ nhật bằng: '
             + dienTich + ' m<sup>2</sup>';

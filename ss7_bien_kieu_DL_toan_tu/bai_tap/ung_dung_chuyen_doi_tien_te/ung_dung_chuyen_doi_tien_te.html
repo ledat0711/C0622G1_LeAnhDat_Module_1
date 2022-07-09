@@ -27,14 +27,14 @@
                 <option  value="KRW">KRW</option>
             </select>
         </td>
-        <td><button onclick="ChangeMoney()">Chuyển Đổi</button></td>
+        <td><button onclick="changeMoney()">Chuyển Đổi</button></td>
     </tr>
 </table>
 <br>
 </body>
 </html>
 <script>
-    function ChangeMoney() {
+    function changeMoney() {
         let amount = +document.getElementById("amount").value;
         let fromC = document.getElementById("from").value;
         let to = document.getElementById("to").value;

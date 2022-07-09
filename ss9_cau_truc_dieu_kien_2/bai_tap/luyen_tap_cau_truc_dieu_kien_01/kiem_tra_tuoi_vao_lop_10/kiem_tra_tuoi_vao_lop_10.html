@@ -7,12 +7,12 @@
 <body>
     <label for="age1">Nhập số tuổi</label><br>
     <input type="number" id="age1" name="age1"><br>
-    <input value="Kiểm tra tuổi" type="button" onclick="Check(Number(age1.value))">
+    <input value="Kiểm tra tuổi" type="button" onclick="check(Number(age1.value))">
     <p id="display0"></p>
 </body>
 <script>
     let age2;
-    function Check(age2) {
+    function check(age2) c
         if (age2 > 15) {
             document.getElementById('display0').innerHTML = 'Đủ điều kiện vào lớp 10';
         }else{
