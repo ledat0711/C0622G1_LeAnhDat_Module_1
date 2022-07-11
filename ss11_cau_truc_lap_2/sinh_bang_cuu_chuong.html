@@ -10,10 +10,12 @@
 </body>
 <script>
     function bangCuuChuong() {
+        let i;
+        let j;
         document.write("<table border='1'>");
-        for (let i=1; i<=10; i++ ) {
+        for  (i=1; i<=10; i++ ) {
             document.write("<tr>");
-            for(let j=2; j<=9; j++){
+            for(j=2; j<=9; j++){
                 document.write('<td style="text-align: center">' + j +'x'+i+'='+i*j + '</td>');
             }
             document.write('</tr>');
