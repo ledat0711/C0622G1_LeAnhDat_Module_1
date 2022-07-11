@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button onclick="nhapNhietDo()">Bắt đầu hoạt động</button>
+</body>
+<script>
+    function nhapNhietDo() {
+        do{
+            let nhietDo=parseFloat(prompt('Nhập giá trị nhiệt độ'));
+            if(nhietDo>100){
+                alert('Yêu cầu giảm nhiệt độ');
+            }else if(nhietDo<20){
+                alert('Yêu cầu tăng nhiệt độ');
+            }else{
+                alert('Nhiệt độ đang trong khoản cho phép')
+            }
+        }while(true);
+    }
+    //Giải thích vì sao dùng vòng lặp vô hạn với điều kiện while(true):
+    //Trong nhà máy nhiệt độ sẽ thay đổi liên tục.
+    // Vì thế ta phải liên tục cập nhật nhiệt độ cho Hệ thống, nên ở đây ta sẽ dùng vòng lặp vô hạn.
+</script>
+</html>

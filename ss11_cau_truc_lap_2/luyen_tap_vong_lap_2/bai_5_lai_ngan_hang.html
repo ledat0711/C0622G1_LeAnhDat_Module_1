@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="tienIn">Nhập số tiền ban đầu</label>
+    <input type="number" id="tienIn" name="tienIn">
+    <label for="tienIn">VND.</label><br><br>
+    <label for="soThangIn">Nhập số tháng vay</label>
+    <input type="number" id="soThangIn" name="soThangIn">
+    <label for="soThangIn">tháng.</label><br><br>
+    <button onclick="tienNganHang(Number(tienIn.value), Number(soThangIn.value))">Tính khoản tiền phải trả</button>
+    <br><br>
+    <output id="out"></output>
+</body>
+<script>
+    function tienNganHang(tienBanDau, soThang){
+        for ( let i = 0 ; i < soThang ; i++ ) {
+            tienBanDau = tienBanDau + (tienBanDau*6/100);
+        }
+        document.getElementById('out').value='Hết thời hạn, bạn phải trả số tiền: ' + tienBanDau.toFixed(0) + ' VND.';
+    }
+</script>
+</html>

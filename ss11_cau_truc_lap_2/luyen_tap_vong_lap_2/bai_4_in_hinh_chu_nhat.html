@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="rongIn">Nhập giá trị cạnh thứ nhất</label>
+    <input type="number" id="rongIn" name="rongIn">
+    <label for="daiIn">Nhập giá trị cạnh thứ 2</label>
+    <input type="number" id="daiIn" name="daiIn">
+    <button onclick="inHinhChuNhat(Number(rongIn.value), Number(daiIn.value))">Chạy</button>
+</body>
+<script>
+    function inHinhChuNhat(rong, dai){
+        let i;
+        let k;
+        for( i = 1; i <= rong; i++) {
+            for( k = 1 ; k <= dai; k++) {
+                if(i == 1 || k == 1 || i == rong || k == dai){
+                    document.write('*');
+                }
+                else{
+                    document.write('&nbsp&nbsp');
+                }
+            }
+            document.write('<br>');
+        }
+    }
+</script>
+</html>

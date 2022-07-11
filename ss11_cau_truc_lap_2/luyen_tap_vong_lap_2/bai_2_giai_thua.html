@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="soIn">Nhập số cần tính giai thừa</label>
+    <input type="number" id="soIn" name="soIn">
+    <button onclick="tinhGiaiThua(Number(soIn.value))">Tính giai thừa</button>
+    <p id="out"></p>
+</body>
+<script>
+    function tinhGiaiThua(soNhap){
+        let soGop= 1;
+        let i;
+        for (i=1; i<=soNhap; i++){
+            soGop=soGop*i;
+        }
+        document.getElementById('out').innerHTML=soNhap+'!='+soGop;
+    }
+</script>
+</html>

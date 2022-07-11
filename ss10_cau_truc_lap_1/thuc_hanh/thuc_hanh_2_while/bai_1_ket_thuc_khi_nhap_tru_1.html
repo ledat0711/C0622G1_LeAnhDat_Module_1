@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button onclick="dungKhiTru1()">Nhấn nút để bắt đầu quá trình nhập từng số hạng</button>
+    <p id="out1"></p>
+</body>
+<script>
+    function dungKhiTru1(soNhap) {
+        let tong = 0;
+        let hienThiDaySo = "";
+        soNhap = parseFloat(prompt('Nhập giá trị để cộng vào tổng (dừng khi nhập -1):'));
+        alert('Bạn vừa nhập số: '+soNhap);
+        hienThiDaySo += soNhap + ' + ';
+        tong += soNhap;
+        while (soNhap !== (-1)) {
+            soNhap = parseFloat(prompt('Nhập giá trị để cộng vào tổng (dừng khi nhập -1):'));
+            if (soNhap !== (-1)) {
+                alert('Bạn vừa nhập số: '+ soNhap);
+                hienThiDaySo += soNhap + ' + ';
+                tong += soNhap;
+            } else{
+                alert('Bạn vừa nhập số: '+ soNhap);
+                tong -= 1;
+                hienThiDaySo +=' (-1)  =  ';
+            }
+            document.getElementById('out1').innerHTML ='Kết quả tính tổng của dãy số vừa nhập : ' + hienThiDaySo + tong;
+        }
+    }
+</script>
+</html>
