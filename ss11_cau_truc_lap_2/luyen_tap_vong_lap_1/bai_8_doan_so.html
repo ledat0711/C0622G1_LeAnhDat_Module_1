@@ -8,28 +8,27 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="doanso()"><h2>Chơi</h2></button>
+    <button onclick="doanSo()"><h2>Chơi</h2></button>
 </body>
 <script>
-    function doanso() {
+    function doanSo() {
         let numberDau = +prompt('Nhập vào giá trị min trong khoảng bạn muốn đoán');
         let numberCuoi = +prompt("Nhập vào giá trị max trong khoảng bạn muốn đoán");
-        // let number_ran = Math.floor(Math.random() * number);
-        let number_ran2 = Math.floor(Math.random() * (numberCuoi-numberDau)) + numberDau;
-        console.log(number_ran2);
-        let number_check = +prompt ("Nhập số bạn đoán");
+        let numberRan2 = Math.floor(Math.random() * (numberCuoi-numberDau)) + numberDau;
+        console.log(numberRan2);
+        let numberCheck = +prompt ("Nhập số bạn đoán");
         let count = 0;
-        while (number_check !== number_ran2) {
+        while (numberCheck !== numberRan2) {
             count++;
             if (count == 4) {
                 alert("Bạn hết số lần đoán")
                 break;
-            }else if (number_check < number_ran2) {
+            }else if (numberCheck < numberRan2) {
                 alert("Số bạn đoán bé hơn");
             } else {
                 alert ("Số bạn đoán lớn hơn");
             }
-            number_check = +prompt ("Nhập số bạn đoán");
+            numberCheck = +prompt ("Nhập số bạn đoán");
         }
         if (count == 4) {
             document.write("Bạn hết số lần đoán");
