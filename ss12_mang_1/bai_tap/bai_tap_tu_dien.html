@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <p>TỪ ĐIỂN</p>
+    <input type="text" id="in" name="in">
+    <input type="button" onclick="tuDien()" id="click" value="Dịch từ Việt sang Anh">
+    <input type="text" id="out" name="out">
+</form>
+</body>
+<script>
+    function tuDien() {
+        let vie = ['bút chì', 'trái bóng', 'cây thước'];
+        let eng = ['pencil', 'ball', 'ruler'];
+        let viTri = vie.indexOf(document.getElementById('in').value);
+        document.getElementById("out").value = eng[viTri];
+    }
+</script>
+</html>
