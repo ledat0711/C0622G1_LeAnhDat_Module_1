@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" value="Bắt đầu tạo mảng" onclick="taoMang()">
+    <p id="outMang"></p>
+    <br><br><br>
+    <input type="text" id="soNguyenIn" name="soNguyenIn">
+    <button onclick="timSoNguyen(Number(soNguyenIn.value))">Tìm số nguyên V trong mảng</button>
+    <p id="outTimSoNguyen"></p>
+</body>
+<script>
+    let mang=[];
+    function taoMang() {
+        for ( let j=0 ; j<10 ; j++ ) {
+            mang[j] = +prompt("Nhập vào phần tử chỉ số "+j+ " vào mảng");
+        }
+            document.getElementById('outMang').innerHTML=mang;
+    }
+    function timSoNguyen(soNguyenCanTim) {
+        for (let i = 0; i < mang.length; i++) {
+            if (mang[i] == soNguyenCanTim) {
+                document.getElementById("outTimSoNguyen").innerHTML = "V is in the array"
+                document.getElementById('soNguyenIn').value ='';
+                break;
+            }
+            if (i==mang.length-1){
+                document.getElementById("outTimSoNguyen").innerHTML="V is NOT in the array"
+                document.getElementById('soNguyenIn').value='';
+            }
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>mang=[4,5,1,2,9,8,7,6,10,3]</p>
+    <input type="text" id="soNguyenIn" name="soNguyenIn">
+    <button onclick="timVaXoaSoNguyen(Number(soNguyenIn.value))">Tìm và xóa số nguyên trong mảng</button>
+    <p id="outMang2"></p>
+</body>
+<script>
+    function timVaXoaSoNguyen(soNguyenCanTim) {
+        let  mang=[4,5,1,2,9,8,7,6,10,3];
+        for (let i = 0; i < mang.length; i++) {
+            if (mang[i] == soNguyenCanTim) {
+                let j=i;
+                do {
+                    mang[j]=mang[j+1];
+                    j++;
+                }
+                while(j<mang.length);
+            }
+        }
+        mang[mang.length-1]=0;
+        document.getElementById('outMang2').innerHTML='Mảng sau xóa: mang=[' + mang.toString()+']';
+    }
+</script>
+</html>
