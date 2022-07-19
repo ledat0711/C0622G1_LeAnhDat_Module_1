@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button onclick="lonHonBang10()">Chạy</button>
+</body>
+<script>
+    function lonHonBang10() {
+        let mang1 =[11, 12, 14, 34, 1, 4, 5];
+        document.write('Các số nguyên lớn hơn 10: <br>')
+        let j=0;
+        for( let i=0; i< mang1.length; i++){
+            if( mang1[i]>=10){
+                document.write(mang1[i]+'<br>')
+                j++
+            }
+        }
+        document.write('Có tổng cộng '+j+' số nguyên lớn hơn 10.')
+    }
+</script>
+</html>
