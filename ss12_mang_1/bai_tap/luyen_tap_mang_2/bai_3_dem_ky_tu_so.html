@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let demKyTuSo = 0;
+    let mang = ["a","b","d", 0, 2, 4, 7];
+    document.write(mang.toString());
+    document.write('<br>'+ 'Kích thước mảng: ' + mang.length);
+    for (let i = 0; i < mang.length; i++) {
+        if (typeof (mang[i])=="number") {
+            demKyTuSo++;
+        }
+    }
+    document.write('<br>'+ 'Số lượng ký tự số :'+ demKyTuSo);
+</script>
+</html>
