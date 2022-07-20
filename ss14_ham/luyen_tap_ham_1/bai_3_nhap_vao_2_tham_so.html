@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="number" id = 'firstNum' name="firstNum">
+    <input type="number" id = 'secondNum' name="secondNum">
+    <button onclick="input2Num(Number(firstNum.value), Number(secondNum.value))">Nhấn để thực hiện</button>
+    <p id="out"></p>
+</body>
+<script>
+    function input2Num(firstNum, secondNum){
+        if (firstNum>secondNum){
+            document.getElementById('out').innerHTML='Số thứ nhất lớn hơn số thứ hai';
+            alert('Số thứ nhất lớn hơn số thứ hai');
+        }else{
+            let sum;
+            sum=firstNum+secondNum;
+            document.getElementById('out').innerHTML='Tổng='+sum;
+            return sum;
+        }
+    }
+</script>
+</html>

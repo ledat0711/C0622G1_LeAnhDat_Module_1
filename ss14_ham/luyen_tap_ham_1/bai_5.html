@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button onclick="xuatTenChomSao()">Nhấn thực hiện</button>
+    <p id="out"></p>
+</body>
+<script>
+    let cacNgoiSao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let cacChomSao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+    function xuatTenChomSao(ten) {
+        let tenNgoiSao=prompt('Nhập tên ngôi sao');
+        let index = cacNgoiSao.indexOf(tenNgoiSao);
+        if (index == -1) {
+            document.getElementById('out').innerHTML='Không tìm thấy chòm sao của ngôi sao này';
+        } else {
+            document.getElementById('out').innerHTML='Chòm sao: ' + cacChomSao[index];
+        }
+    }
+
+</script>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="number" id="numIn" name="numIn">
+    <button onclick="tangLen1(Number(numIn.value))">Nhấn để thực hiện</button>
+    <p id="out"></p>
+</body>
+<script>
+    function tangLen1(number){
+        number++;
+        document.getElementById('out').innerHTML=number;
+        return number;
+    }
+</script>
+</html>
