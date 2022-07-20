@@ -8,10 +8,6 @@
 <input type="text" id="nhapGiaTriCacPhanTuVaoMang"/>
 <input type="button" value="Thêm" onclick="themPhanTuVaoArray();"/>
 <input type="button"  value="Hiển thị" onclick="hienThiMang();"/>
-<br>
-<br>
-<button onclick="daoNguoc()">Đảo ngược mảng</button>
-<input type="button"  value="Hiển thị mảng đã đảo ngược" onclick="hienThiMang();"/>
 
 <br><output id="out1"></output><output id="ketQua"></output>
 
@@ -25,16 +21,8 @@
         x++;
         document.getElementById("nhapGiaTriCacPhanTuVaoMang").value = ""; //Trả giá trị phần tử về null (rỗng).
     }
-    function daoNguoc() {
-        let first = 0;
-        let last = array.length - 1;
-        while (first < last) {
-            let b = array[first];
-            array[first] = array[last];
-            array[last] = b;
-            first++;
-            last--;
-        }
+    function timPhanTu() {
+
     }
     function hienThiMang() {
         let e="";

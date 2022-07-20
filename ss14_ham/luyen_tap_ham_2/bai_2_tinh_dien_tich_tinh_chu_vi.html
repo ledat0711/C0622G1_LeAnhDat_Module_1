@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="numIn" name="numIn">
+<label for="numIn">Đơn vị: mét</label><br>
+<button onclick="dienTichChuVi(Number(numIn.value))">Nhấn để tính</button>
+<p id="out"></p>
+</body>
+<script>
+    function dienTichChuVi(R) {
+        const pi = 3.14159;
+        let dienTich = pi * R * R;
+        let chuVi = pi * 2 * R;
+        document.getElementById('out').innerHTML='Chu vi bằng ' + chuVi +' m<sup>2</sup>'+ '<br>Diện tích bằng ' + dienTich+' m<sup>2</sup>';
+    }
+</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="kyTuIn" name="kyTuIn">
+<button onclick="kyTuSo(kyTuIn.value)">Kiểm tra</button>
+<p id="out"></p>
+</body>
+<script>
+    function kyTuSo(kyTu){
+        if (isNaN(kyTu)){
+            document.getElementById('out').innerHTML='false';
+            return false;
+        }else{
+            document.getElementById('out').innerHTML='true';
+            return true;
+        }
+    }
+</script>
+</html>

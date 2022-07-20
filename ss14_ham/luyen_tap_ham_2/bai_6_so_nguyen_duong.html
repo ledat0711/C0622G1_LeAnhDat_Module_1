@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="numIn" name="numIn">
+<button onclick="nguyenDuong(Number(numIn.value))">Nhấn để kiểm tra</button>
+<p id="out"></p>
+</body>
+<script>
+    function nguyenDuong(number) {
+        if (number>0){
+            document.getElementById('out').innerHTML='true';
+            return true;
+        }else{
+            document.getElementById('out').innerHTML='false';
+            return false;
+        }
+    }
+</script>
+</html>

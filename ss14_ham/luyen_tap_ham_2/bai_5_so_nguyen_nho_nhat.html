@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="soThuNhat" name="soThuNhat">
+<input type="number" id="soThuHai" name="soThuHai">
+<input type="number" id="soThuBa" name="soThuBa">
+<button onclick="soNhoNhat(Number(soThuNhat.value), Number(soThuHai.value), Number(soThuBa.value))">Đưa ra số nhỏ nhất</button>
+<p id="out"></p>
+</body>
+<script>
+    function soNhoNhat(thuNhat, thuHai, thuBa) {
+        let min = thuNhat;
+        if (thuHai<min){
+            min=thuHai;
+        }
+        if (thuBa<min){
+            min=thuBa;
+        }
+        document.getElementById('out').innerHTML=min;
+        return min;
+    }
+</script>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="numIn1" name="numIn1">
+<input type="number" id="numIn2" name="numIn2">
+<button onclick="doiCho(Number(numIn1.value), Number(numIn2.value))">Chạy</button>
+</body>
+<script>
+    function doiCho(num1, num2) {
+        document.write(num1 + ' => ' + num2 + '<br>');
+        let trungGian=num1;
+        num1=num2;
+        num2=trungGian
+        document.write(num1 + ' => ' + num2 + '<br>');
+    }
+</script>
+</html>

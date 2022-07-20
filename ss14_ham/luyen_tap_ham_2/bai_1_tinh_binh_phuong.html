@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input id="numIn" name="numIn">
+    <button onclick="binhPhuong(Number(numIn.value))">Nhấn để tính bình phương</button>
+    <p id="out"></p>
+</body>
+<script>
+    function binhPhuong(number) {
+        let result = Math.pow(number,2);
+        document.getElementById('out').innerHTML=result;
+    }
+</script>
+</html>
