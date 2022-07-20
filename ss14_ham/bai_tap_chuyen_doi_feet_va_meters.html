@@ -9,18 +9,18 @@
 <label for="numIn1">Đơn vị: met.</label><br>
 <button onclick="changeMeterToFoot(Number(numIn1.value))">Meter to Foot</button>
 <p id="out1"></p>
-<br>
+<h3>----------------------------------------------------------------</h3>
 <input type="number" id="numIn2" name="numIn2">
 <label for="numIn2">Đơn vị: foot.</label><br>
 <button onclick="changeFootToMeter(Number(numIn2.value))">Foot to Met</button>
 <p id="out2"></p>
 <script>
     function changeMeterToFoot(num1) {
-        document.getElementById('out1').innerHTML=3.279 * num1 + ' foot';
+        document.getElementById('out1').innerHTML = 3.279 * num1 + ' foot';
     }
 
     function changeFootToMeter(num2) {
-        document.getElementById('out2').innerHTML=0.305 * num2 + ' met';
+        document.getElementById('out2').innerHTML = 0.305 * num2 + ' met';
     }
 </script>
 </body>
