@@ -5,24 +5,25 @@
     <title>Title</title>
 </head>
 <body>
-<p>mang = ["a", "d", "e", "q", "e", "u", "a", "h", "m", "k", "l"]</p>
-<input type="text" id="in1" name="in1">
-<button onclick="demSoLanXuatHien(in1.value)">Đếm số lần xuất hiện</button>
+
 </body>
 <script>
-    function demSoLanXuatHien(kyTu) {
-        let mang = ["a", "d", "e", "q", "e", "u", "a", "h", "m", "k", "l"];
+    function demSuXuatHien(mang, kyTu) {
         let count = 0;
-        for (let i = 0; i < mang.length; i++) {
-            if (kyTu === mang[i]) {
-                count++;
-            }
-        }
-        if (count === 0) {
+        let i;
+        if (mang.indexOf(kyTu) === -1) {
             alert(-1);
         } else {
-            alert('Số lần xuất hiện: ' + count);
+            for (i = 0; i < mang.length; i++) {
+                if (kyTu === mang[i]) {
+                    count++;
+                }
+            }
+            alert('Số lần xuất hiện của ký tự: ' + count);
         }
     }
+    let mangNhapVao = ["a", "d", "e", "q", "e", "u", "a", "h", "m", "k", "l"];
+    let kyTuBatKy = prompt('Nhập vào một ký tự');
+    demSuXuatHien(mangNhapVao, kyTuBatKy);
 </script>
 </html>
