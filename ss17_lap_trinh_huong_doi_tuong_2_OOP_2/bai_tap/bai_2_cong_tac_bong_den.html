@@ -48,12 +48,12 @@
             return this.status;
         }
 
-        turnOn() {
+        congTacTurnOn() {
             this.status = 1;
             bongDen.denSang();
         }
 
-        turnOff() {
+        congTacTurnOff() {
             this.status = 0;
             bongDen.denTat();
         }
@@ -63,9 +63,9 @@
     let congTac = new CongTac();
     congTac.connectToLamp(bongDen);
     document.writeln('Đã kết nối bóng đèn và công tắc, check: ' + bongDen.checkBongDenSangTat());
-    congTac.turnOn();
+    congTac.congTacTurnOn();
     document.writeln('<br>'+'Bật đèn, check: ' + bongDen.checkBongDenSangTat());
-    congTac.turnOff();
+    congTac.congTacTurnOff();
     document.writeln('<br>'+'Tắt đèn, check: ' + bongDen.checkBongDenSangTat());
 </script>
 </html>
