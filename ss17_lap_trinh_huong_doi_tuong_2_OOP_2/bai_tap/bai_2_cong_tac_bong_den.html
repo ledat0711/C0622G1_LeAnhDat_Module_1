@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    class BongDen {
+        constructor(status) {
+            this.status = status;
+        }
+
+        denSang() {
+            this.status = 1;
+        }
+
+        denTat() {
+            this.status = 0;
+        }
+
+        checkBongDenSangTat() {
+            if (this.status === 1) {
+                return "Đã có ánh sáng";
+            } else {
+                return "Không có ánh sáng";
+            }
+        }
+    }
+
+    class CongTac {
+        constructor(bongDen, status) {
+            this.bongDen = bongDen;
+            this.status = status;
+        }
+
+        connectToLamp(value1) {
+            this.bongDen = value1;
+        }
+
+        setStatus(value2) {
+            this.status = value2;
+        }
+
+        getStatus() {
+            return this.status;
+        }
+
+        turnOn() {
+            this.status = 1;
+            bongDen.denSang();
+        }
+
+        turnOff() {
+            this.status = 0;
+            bongDen.denTat();
+        }
+    }
+
+    let bongDen = new BongDen();
+    let congTac = new CongTac();
+    congTac.connectToLamp(bongDen);
+    document.writeln('Đã kết nối bóng đèn và công tắc, check: ' + bongDen.checkBongDenSangTat());
+    congTac.turnOn();
+    document.writeln('<br>'+'Bật đèn, check: ' + bongDen.checkBongDenSangTat());
+    congTac.turnOff();
+    document.writeln('<br>'+'Tắt đèn, check: ' + bongDen.checkBongDenSangTat());
+</script>
+</html>
