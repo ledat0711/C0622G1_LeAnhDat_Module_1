@@ -8,6 +8,21 @@
 
 </body>
 <script>
+    class Rectangle {
+        constructor(width,height) {
+            this.width=width;
+            this.height=height;
+        }
+        getArea(){
+            document.write("Diện tích: " + this.width*this.height);
+        }
 
+        getPerimeter() {
+            document.write("<br>Chu vi: " + (this.width + this.height)*2);
+        }
+    }
+    let ketQua= new Rectangle( +prompt('Nhập giá trị dài'), +prompt('Nhập giá trị rộng') );
+    ketQua.getArea();
+    ketQua.getPerimeter();
 </script>
 </html>
