@@ -5,19 +5,23 @@
     <title>Title</title>
 </head>
 <body>
-<input type="text" id="kyTuIn" name="kyTuIn">
-<button onclick="checkNguyenAm(kyTuIn.value)">Nhấn để kiểm tra</button>
+<input type="text" id="kyTuIn" name="kyTuIn" maxlength="1">
+<button onclick="checkNguyenAm(kyTuIn.value)" >Nhấn để kiểm tra</button>
 <p id="out"></p>
 </body>
 <script>
     function checkNguyenAm(kyTu) {
-        let arr=['o','u','i','a','e','O','U','I','A','E'];
-        if(arr.indexOf(kyTu)==-1){
-            document.getElementById('out').innerHTML='"'+kyTu+'"'+' là phụ âm';
-        }else{
-            document.getElementById('out').innerHTML='"'+kyTu+'"'+' là nguyên âm';
+        let arr = ['o', 'u', 'i', 'a', 'e', 'O', 'U', 'I', 'A', 'E'];
+        if (!isNaN(kyTu)) {
+            document.getElementById('out').innerHTML = 'Nhập lỗi';
+        } else {
+            if (arr.indexOf(kyTu) == -1) {
+                document.getElementById('out').innerHTML = '"' + kyTu + '"' + ' là phụ âm';
+            } else {
+                document.getElementById('out').innerHTML = '"' + kyTu + '"' + ' là nguyên âm';
+            }
+            document.getElementById('kyTuIn').value = "";
         }
-        document.getElementById('kyTuIn').value="";
     }
 </script>
 </html>
