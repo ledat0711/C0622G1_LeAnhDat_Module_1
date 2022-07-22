@@ -13,10 +13,11 @@
     function checkNguyenAm(kyTu) {
         let arr=['o','u','i','a','e','O','U','I','A','E'];
         if(arr.indexOf(kyTu)==-1){
-            document.getElementById('out').innerHTML='là phụ âm';
+            document.getElementById('out').innerHTML='"'+kyTu+'"'+' là phụ âm';
         }else{
-            document.getElementById('out').innerHTML='là nguyên âm';
+            document.getElementById('out').innerHTML='"'+kyTu+'"'+' là nguyên âm';
         }
+        document.getElementById('kyTuIn').value="";
     }
 </script>
 </html>
