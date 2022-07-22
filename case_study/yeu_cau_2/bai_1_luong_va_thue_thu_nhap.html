@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="luongIn">Nhập tiền lương vào đây</label>
+<input type="number" id="luongIn" name="luongIn">
+<label for="luongIn">đơn vị : triệu VND.</label>
+<br>
+<button onclick="luongVaThue(Number(luongIn.value))">Tính ra thuế và lương thực nhận</button>
+<p id="outThue"></p>
+<p id="outLuongThucNhan"></p>
+</body>
+<script>
+    function luongVaThue(luong){
+        let thue;
+        if(luong>=15){
+            thue=luong*20/100;
+        }else if(luong>=7){
+            thue=luong*10/100;
+        }else{
+            thue=luong*5/100;
+        }
+        let luongThucNhan=luong-thue;
+        document.getElementById('outThue').innerHTML='Thuế: ' + thue +' triệu VND';
+        document.getElementById('outLuongThucNhan').innerHTML='Lương ròng (lương sau thuế): '+ luongThucNhan+' triệu VND';
+    }
+</script>
+</html>

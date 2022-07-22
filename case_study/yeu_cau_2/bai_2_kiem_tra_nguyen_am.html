@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="kyTuIn" name="kyTuIn">
+<button onclick="checkNguyenAm(kyTuIn.value)">Nhấn để kiểm tra</button>
+<p id="out"></p>
+</body>
+<script>
+    function checkNguyenAm(kyTu) {
+        let arr=['o','u','i','a','e','O','U','I','A','E'];
+        if(arr.indexOf(kyTu)==-1){
+            document.getElementById('out').innerHTML='là phụ âm';
+        }else{
+            document.getElementById('out').innerHTML='là nguyên âm';
+        }
+    }
+</script>
+</html>
