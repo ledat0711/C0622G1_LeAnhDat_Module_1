@@ -13,7 +13,8 @@
     function checkNguyenAm(kyTu) {
         let arr = ['o', 'u', 'i', 'a', 'e', 'O', 'U', 'I', 'A', 'E'];
         if (!isNaN(kyTu)) {
-            document.getElementById('out').innerHTML = 'Nhập lỗi';
+            document.getElementById('out').innerHTML = 'Bạn đã nhập ký tự số, vui lòng nhập lại';
+            document.getElementById('kyTuIn').value = "";
         } else {
             if (arr.indexOf(kyTu) == -1) {
                 document.getElementById('out').innerHTML = '"' + kyTu + '"' + ' là phụ âm';

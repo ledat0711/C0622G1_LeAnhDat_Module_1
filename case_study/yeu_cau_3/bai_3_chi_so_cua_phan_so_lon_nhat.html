@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // Cho một danh sách các phân số, hãy tìm chỉ số của phân số lớn nhất (đếm từ 0)
+    let arrA = [1, 5, 2, 9];
+    let arrB = [1, 2, 3, 2];
+    let max = arrA[0] / arrB[0];
+    let chiSo = 0;
+    for (let i = 0; i < arrA.length; i++) {
+        if (arrA[i] / arrB[i] > max) {
+            max = arrA[i] / arrB[i];
+            chiSo = i;
+        }
+    }
+    console.log('Phân số lớn nhất: ' + arrA[chiSo] + '/' + arrB[chiSo]);
+    console.log('Tại chỉ số: ' + chiSo);
+</script>
+</html>
