@@ -13,7 +13,8 @@
     let arrB = [1, 2, 3, 2];
     let max = arrA[0] / arrB[0];
     let chiSo = 0;
-    for (let i = 0; i < arrA.length; i++) {
+    let i;
+    for (i = 0; i < arrA.length; i++) {
         if (arrA[i] / arrB[i] > max) {
             max = arrA[i] / arrB[i];
             chiSo = i;

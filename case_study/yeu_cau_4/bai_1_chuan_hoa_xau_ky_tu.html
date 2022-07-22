@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let input = prompt("Enter smth");
+    getString(input);
+    function getString(text){
+        let arr = [];
+        document.write("Input: " + text + "<br>");
+        for (let i = 0; i < text.length; i++) {
+            arr.push(text.toLowerCase()[i]);
+        }
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === " ") {
+                if (i === 0 || arr[i - 1] === " ") {
+                    arr.splice(i, 1);
+                    i--;
+                }
+            } else {
+                if (i === 0 || arr[i - 1] === " ") {
+                    arr[i] = arr[i].toUpperCase();
+                }
+            }
+        }
+        document.write("Output: " + arr.join(""));
+    }
+</script>
+</html>
