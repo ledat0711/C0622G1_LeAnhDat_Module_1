@@ -11,15 +11,17 @@
 //     Cho xâu kí tự. Hãy đếm số lượng kí tự khác nhau trong xâu đó
 //     Ví dụ: s = "cabca", thì kết quả differentSymbolsNaive(s) = 3.
 // ⇨	Có 3 kí tự khác nhau là a, b và c.
-    let xau="abcdabcdeghjbnbbhhuuvb";
-    let mang=xau.split("");
-    for (let i = 0; i < mang.length; i++) {
-        for (let j=i+1; j<mang.length;j++) {
-            if(mang[i]===mang[j]) {
-                mang.splice(j, 1);
+    let xauKyTu="   abcda   bcdeghjbnbb  hhuuvbzz";
+    let mang1=xauKyTu.split(/\s+/);
+    let mang2=mang1.join("").split("");
+    for (let i = 0; i < mang2.length; i++) {
+        for (let j=i+1; j<mang2.length;j++) {
+            if(mang2[i]===mang2[j]) {
+                mang2.splice(j, 1);
+                }
             }
         }
-    }
-    console.log(mang);
+    console.log(mang2);
+    console.log(mang2.length);
 </script>
 </html>
