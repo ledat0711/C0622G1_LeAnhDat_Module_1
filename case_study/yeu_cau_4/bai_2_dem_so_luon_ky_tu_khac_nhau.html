@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+//     Cho xâu kí tự. Hãy đếm số lượng kí tự khác nhau trong xâu đó
+//     Ví dụ: s = "cabca", thì kết quả differentSymbolsNaive(s) = 3.
+// ⇨	Có 3 kí tự khác nhau là a, b và c.
+    let xau="abcdabcdeghjbnbbhhuuvb";
+    let mang=xau.split("");
+    for (let i = 0; i < mang.length; i++) {
+        for (let j=i+1; j<mang.length;j++) {
+            if(mang[i]===mang[j]) {
+                mang.splice(j, 1);
+            }
+        }
+    }
+    console.log(mang);
+</script>
+</html>
