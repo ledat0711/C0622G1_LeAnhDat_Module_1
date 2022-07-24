@@ -5,18 +5,23 @@
     <title>Title</title>
 </head>
 <body>
-<input type="text" id="kyTuIn" name="kyTuIn" maxlength="1">
-<button onclick="checkNguyenAm(kyTuIn.value)" >Nhấn để kiểm tra</button>
+<label for="kyTuIn">Nhập 1 chữ cái tiếng Anh vào ô</label>
+<input type="text" id="kyTuIn" name="kyTuIn" maxlength="1"><br>
+<button onclick="checkNguyenAm(kyTuIn.value)">Nhấn để kiểm tra</button>
 <p id="out"></p>
 </body>
 <script>
     function checkNguyenAm(kyTu) {
         let arr = ['o', 'u', 'i', 'a', 'e', 'O', 'U', 'I', 'A', 'E'];
-        if (!isNaN(kyTu)) {
-            document.getElementById('out').innerHTML = 'Bạn đã nhập ký tự số, vui lòng nhập lại';
+        let arrBangChuCai = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
+            "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
+            "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R"
+            , "S", "T", "U", "V", "W", "X", "Y", "Z"]
+        if (arrBangChuCai.indexOf(kyTu) === -1) {
+            document.getElementById('out').innerHTML = 'Bạn đã nhập lỗi, vui lòng nhập lại';
             document.getElementById('kyTuIn').value = "";
         } else {
-            if (arr.indexOf(kyTu) == -1) {
+            if (arr.indexOf(kyTu) === -1) {
                 document.getElementById('out').innerHTML = '"' + kyTu + '"' + ' là phụ âm';
             } else {
                 document.getElementById('out').innerHTML = '"' + kyTu + '"' + ' là nguyên âm';

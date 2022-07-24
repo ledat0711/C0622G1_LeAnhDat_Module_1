@@ -8,27 +8,32 @@
 
 </body>
 <script>
-    let input = prompt("Enter smth");
-    getString(input);
-    function getString(text){
-        let arr = [];
-        document.write("Input: " + text + "<br>");
-        for (let i = 0; i < text.length; i++) {
-            arr.push(text.toLowerCase()[i]);
+    // Viết một hàm chuẩn hóa xâu ký tự:
+    //     Biến đổi xâu ký tự thành xâu sao cho trong xâu không có 2 dấu cách liền nhau
+    //     và bắt đầu mỗi từ phải in hoa.
+    //     Ví dụ tRuong    TaN   HAI => Truong Tan Hai.
+    let chuoiInput = prompt('Nhap mot cau gi do.');
+    let mangChuan = [];
+    let arrSoLuongChuCaiTrongMoiTu = []
+    hamChuanHoa();
+    printDaiNhat();
+
+    function hamChuanHoa() {
+        let mang1 = chuoiInput.toLowerCase().split(/\s+/);
+        let mang2 = [];
+        for (let i = 0; i < mang1.length; i++) {
+            mang2 = mang1[i].split("");
+            arrSoLuongChuCaiTrongMoiTu.push(mang2.length);
+            mang2.splice(0, 1, mang2[0].toUpperCase());
+            mangChuan.push(mang2.join(""));
         }
-        for (let i = 0; i < arr.length; i++) {
-            if (arr[i] === " ") {
-                if (i === 0 || arr[i - 1] === " ") {
-                    arr.splice(i, 1);
-                    i--;
-                }
-            } else {
-                if (i === 0 || arr[i - 1] === " ") {
-                    arr[i] = arr[i].toUpperCase();
-                }
-            }
-        }
-        document.write("Output: " + arr.join(""));
+        document.write(mangChuan.join(" "));
+    }
+
+    function printDaiNhat() {
+        let max = +Math.max(...arrSoLuongChuCaiTrongMoiTu);
+        let chiSoTuDaiNhat = +arrSoLuongChuCaiTrongMoiTu.indexOf(max);
+        document.write('<br>' + mangChuan[chiSoTuDaiNhat]);
     }
 </script>
 </html>
