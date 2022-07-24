@@ -20,7 +20,7 @@
     let count = 0;
     for (let k of arr) {
         for (let l of k) {
-            for (let r=2; r<l;r++){
+            for (let r=2; r<=Math.sqrt(l);r++){
                 if (l%r===0){
                     count++;
                 }
