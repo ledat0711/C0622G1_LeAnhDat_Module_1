@@ -9,9 +9,9 @@
 </body>
 <script>
     let so=prompt('Nhập số');
-    let chuViet=['Không' , 'Một', 'Hai','Ba','Bốn','Năm','Sáu','Bảy','Tám','Chín'];
     inRaToanBo(so);
     function inRaToanBo(so) {
+        let chuViet=['Không' , 'Một', 'Hai','Ba','Bốn','Năm','Sáu','Bảy','Tám','Chín'];
         let i;
         for (i = 0; i < so.length; i++) {
             document.write(chuViet[so[i]]+' ');
