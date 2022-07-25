@@ -30,14 +30,14 @@
             mang2.splice(0, 1, mang2[0].toUpperCase());
             mangChuan.push(mang2.join(""));
         }
-        document.write('Trước khi chuẩn hóa: '+chuoiInput);
-        document.write('<br>Sau khi chuẩn hóa: '+mangChuan.join(" "));
+        document.write('Trước khi chuẩn hóa: ' + chuoiInput);
+        document.write('<br>Sau khi chuẩn hóa: ' + mangChuan.join(" "));
     }
 
     function printDaiNhat() {
         let max = +Math.max(...arrSoLuongChuCaiTrongMoiTu);
         let chiSoTuDaiNhat = +arrSoLuongChuCaiTrongMoiTu.indexOf(max);
-        document.write('<br>' + 'Từ dài nhất: '+mangChuan[chiSoTuDaiNhat]);
+        document.write('<br>' + 'Từ dài nhất: ' + mangChuan[chiSoTuDaiNhat]);
     }
 </script>
 </html>
