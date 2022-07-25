@@ -12,7 +12,10 @@
     //     Biến đổi xâu ký tự thành xâu sao cho trong xâu không có 2 dấu cách liền nhau
     //     và bắt đầu mỗi từ phải in hoa.
     //     Ví dụ tRuong    TaN   HAI => Truong Tan Hai.
-    let chuoiInput = prompt('Nhap mot cau gi do.');
+    // Và một hàm tìm từ dài nhất trong 1 xâu ký tự. Hàm main sử dụng các hàm này để nhập xâu ký tự từ bàn phím,
+    // in ra xâu trước và sau khi chuẩn hóa, 1 từ dài nhất trong xâu đó.
+
+    let chuoiInput = prompt('Nhập một câu');
     let mangChuan = [];
     let arrSoLuongChuCaiTrongMoiTu = []
     hamChuanHoa();
@@ -27,13 +30,14 @@
             mang2.splice(0, 1, mang2[0].toUpperCase());
             mangChuan.push(mang2.join(""));
         }
-        document.write(mangChuan.join(" "));
+        document.write('Trước khi chuẩn hóa: '+chuoiInput);
+        document.write('<br>Sau khi chuẩn hóa: '+mangChuan.join(" "));
     }
 
     function printDaiNhat() {
         let max = +Math.max(...arrSoLuongChuCaiTrongMoiTu);
         let chiSoTuDaiNhat = +arrSoLuongChuCaiTrongMoiTu.indexOf(max);
-        document.write('<br>' + mangChuan[chiSoTuDaiNhat]);
+        document.write('<br>' + 'Từ dài nhất: '+mangChuan[chiSoTuDaiNhat]);
     }
 </script>
 </html>
