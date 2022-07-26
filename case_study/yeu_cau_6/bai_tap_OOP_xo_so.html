@@ -11,6 +11,13 @@
         <td colspan="7" style="text-align: center"><h1>ỨNG DỤNG XỔ SỐ</h1></td>
     </tr>
     <tr>
+        <td colspan="7" style="text-align: center">
+            <h4>
+                <button onclick="ngauNhienDaySoVeSo()"><h3>Nhấn để tạo dãy số ngẫu nhiên</h3></button>
+            </h4>
+        </td>
+    </tr>
+    <tr>
         <td style="text-align: center"><h3>Dãy số <br> của khách hàng</h3></td>
         <td><input type="number" id="soViTri1a" name="soViTri1a" readonly
                    onclick="viTri1.setVaLueDaySoVeSo(); traKetQuaVeNull()"></td>
@@ -26,6 +33,13 @@
                    onclick="viTri6.setVaLueDaySoVeSo(); traKetQuaVeNull()"></td>
     </tr>
     <tr>
+        <td colspan="7" style="text-align: center">
+            <h4>
+                <button onclick="ngauNhienKetQua()"><h3>Nhấn để xem kết quả xổ số</h3></button>
+            </h4>
+        </td>
+    </tr>
+    <tr>
         <td style="text-align: center"><h3>Kết quả <br> sổ số của công ty</h3></td>
         <td><input type="number" id="soViTri1b" name="soViTri1b" readonly></td>
         <td><input type="number" id="soViTri2b" name="soViTri2b" readonly></td>
@@ -34,13 +48,13 @@
         <td><input type="number" id="soViTri5b" name="soViTri5b" readonly></td>
         <td><input type="number" id="soViTri6b" name="soViTri6b" readonly></td>
     </tr>
-    <tr>
-        <td colspan="7" style="text-align: center">
-            <h4>
-                <button onclick="ngauNhienKetQua()"><h3>Nhấn để xem kết quả xổ số</h3></button>
-            </h4>
-        </td>
-    </tr>
+    <!--    <tr>-->
+    <!--        <td colspan="7" style="text-align: center">-->
+    <!--            <h4>-->
+    <!--                <button onclick="ngauNhienKetQua()"><h3>Nhấn để xem kết quả xổ số</h3></button>-->
+    <!--            </h4>-->
+    <!--        </td>-->
+    <!--    </tr>-->
     <tr>
         <td colspan="7" style="text-align: center">
             <h4>
@@ -117,7 +131,8 @@
         viTri5.setTraKetQuaVeNull();
         viTri6.setTraKetQuaVeNull();
     }
-    function traDaySoVeNull(){
+
+    function traDaySoVeNull() {
         viTri1.setTraDaySoVeNull();
         viTri2.setTraDaySoVeNull();
         viTri3.setTraDaySoVeNull();
