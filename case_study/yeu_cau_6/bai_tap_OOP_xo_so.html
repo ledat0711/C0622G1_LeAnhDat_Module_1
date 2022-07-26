@@ -12,12 +12,18 @@
     </tr>
     <tr>
         <td style="text-align: center"><h3>Dãy số <br> của khách hàng</h3></td>
-        <td><input type="number" id="soViTri1a" name="soViTri1a" readonly onclick="viTri1.setVaLueDaySoVeSo(); traKetQuaVeNull()"></td>
-        <td><input type="number" id="soViTri2a" name="soViTri2a" readonly onclick="viTri2.setVaLueDaySoVeSo(); traKetQuaVeNull()"></td>
-        <td><input type="number" id="soViTri3a" name="soViTri3a" readonly onclick="viTri3.setVaLueDaySoVeSo(); traKetQuaVeNull()"></td>
-        <td><input type="number" id="soViTri4a" name="soViTri4a" readonly onclick="viTri4.setVaLueDaySoVeSo(); traKetQuaVeNull()"></td>
-        <td><input type="number" id="soViTri5a" name="soViTri5a" readonly onclick="viTri5.setVaLueDaySoVeSo(); traKetQuaVeNull()"></td>
-        <td><input type="number" id="soViTri6a" name="soViTri6a" readonly onclick="viTri6.setVaLueDaySoVeSo(); traKetQuaVeNull()"></td>
+        <td><input type="number" id="soViTri1a" name="soViTri1a" readonly
+                   onclick="viTri1.setVaLueDaySoVeSo(); traKetQuaVeNull()"></td>
+        <td><input type="number" id="soViTri2a" name="soViTri2a" readonly
+                   onclick="viTri2.setVaLueDaySoVeSo(); traKetQuaVeNull()"></td>
+        <td><input type="number" id="soViTri3a" name="soViTri3a" readonly
+                   onclick="viTri3.setVaLueDaySoVeSo(); traKetQuaVeNull()"></td>
+        <td><input type="number" id="soViTri4a" name="soViTri4a" readonly
+                   onclick="viTri4.setVaLueDaySoVeSo(); traKetQuaVeNull()"></td>
+        <td><input type="number" id="soViTri5a" name="soViTri5a" readonly
+                   onclick="viTri5.setVaLueDaySoVeSo(); traKetQuaVeNull()"></td>
+        <td><input type="number" id="soViTri6a" name="soViTri6a" readonly
+                   onclick="viTri6.setVaLueDaySoVeSo(); traKetQuaVeNull()"></td>
     </tr>
     <tr>
         <td style="text-align: center"><h3>Kết quả <br> sổ số của công ty</h3></td>
@@ -55,8 +61,12 @@
             this.daySoVeSo.value = +prompt('Nhập một số từ 0-99: ');
         }
 
-        setTraKetQuaVeNull(){
-            this.ketQua.value=null;
+        setTraKetQuaVeNull() {
+            this.ketQua.value = null;
+        }
+
+        setTraDaySoVeNull() {
+            this.daySoVeSo.value = null;
         }
 
         getValueDaySoVeSo() {
@@ -98,7 +108,8 @@
         viTri5.getValueKetQua();
         viTri6.getValueKetQua();
     }
-    function traKetQuaVeNull(){
+
+    function traKetQuaVeNull() {
         viTri1.setTraKetQuaVeNull();
         viTri2.setTraKetQuaVeNull();
         viTri3.setTraKetQuaVeNull();
@@ -106,6 +117,15 @@
         viTri5.setTraKetQuaVeNull();
         viTri6.setTraKetQuaVeNull();
     }
+    function traDaySoVeNull(){
+        viTri1.setTraDaySoVeNull();
+        viTri2.setTraDaySoVeNull();
+        viTri3.setTraDaySoVeNull();
+        viTri4.setTraDaySoVeNull();
+        viTri5.setTraDaySoVeNull();
+        viTri6.setTraDaySoVeNull();
+    }
+
     let luaChon = +prompt('Bạn có 2 lựa chọn:\n1. Bạn muốn tự chọn số.\n2. Hệ thống tự tạo số ngẫu nhiên.');
     if (luaChon === 2) {
         ngauNhienDaySoVeSo();
@@ -123,6 +143,8 @@
         } else {
             alert('Khách hàng không trúng giải. Vui lòng thử lại sau.');
         }
+        traKetQuaVeNull();
+        traDaySoVeNull();
     }
 </script>
 </html>
