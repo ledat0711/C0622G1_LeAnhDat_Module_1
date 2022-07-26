@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" readonly id="num1">
+<button onclick="">Nhấn để tạo ra số random</button>
+</body>
+<script>
+    class DaySoVeSo {
+        constructor() {
+            this.number = Math.floor(Math.random() * 10);
+        }
+        getValue() {
+            document.getElementById('num1').value = this.number;
+            return this.number;
+        }
+    }
+    let viTri1= new DaySoVeSo();
+    viTri1.getValue();
+</script>
+</html>

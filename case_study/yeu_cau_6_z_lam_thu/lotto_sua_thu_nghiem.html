@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotto</title>
+    <style>
+        #container{
+            height: 300px;
+            width: 300px;
+            border: solid 2px black;
+            text-align: center;
+
+        }
+        input{
+            background-color: blue;
+            color: white;
+            height: 70px;
+            width: 70px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        button{
+            height: 30px;
+            width: 70px;
+            margin-top: 20px;
+            background-color: teal;
+            border-radius: 20px;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+
+        }
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <h1>Lotto Game:</h1>
+    <input type="text" id ="one">
+    <input type="text" id ="two">
+    <input type="text" id ="three"><br>
+    <button onclick="truyenDuLieu()">Click</button>
+</div>
+<script>
+    var randone= document.getElementById("one");
+    var randtwo= document.getElementById("two");
+    var randthree= document.getElementById("three");
+    function truyenDuLieu(){
+        numberone();
+        numbertwo();
+        numberthree();
+    }
+    function numberone(){
+        randone.value= Math.floor(Math.random()*10)
+    }
+    function numbertwo(){
+        randtwo.value= Math.floor(Math.random()*10)
+    }
+    function numberthree(){
+        randthree.value= Math.floor(Math.random()*10)
+    }
+</script>
+</body>
+</html>

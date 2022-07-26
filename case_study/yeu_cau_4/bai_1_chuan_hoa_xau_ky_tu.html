@@ -18,11 +18,11 @@
     let chuoiInput = prompt('Nhập một câu');
     let mangChuan = [];
     let arrSoLuongChuCaiTrongMoiTu = []
-    hamChuanHoa();
+    hamChuanHoa(chuoiInput);
     printDaiNhat();
 
-    function hamChuanHoa() {
-        let mang1 = chuoiInput.toLowerCase().split(/\s+/);
+    function hamChuanHoa(chuoi) {
+        let mang1 = chuoi.toLowerCase().split(/\s+/);
         let mang2 = [];
         for (let i = 0; i < mang1.length; i++) {
             mang2 = mang1[i].split("");
@@ -30,14 +30,14 @@
             mang2.splice(0, 1, mang2[0].toUpperCase());
             mangChuan.push(mang2.join(""));
         }
-        document.write('Trước khi chuẩn hóa: ' + chuoiInput);
-        document.write('<br>Sau khi chuẩn hóa: ' + mangChuan.join(" "));
+        document.write('Trước khi chuẩn hóa: ' + chuoi);
+        document.write('<br><br>Sau khi chuẩn hóa: ' + mangChuan.join(" "));
     }
 
     function printDaiNhat() {
         let max = +Math.max(...arrSoLuongChuCaiTrongMoiTu);
         let chiSoTuDaiNhat = +arrSoLuongChuCaiTrongMoiTu.indexOf(max);
-        document.write('<br>' + 'Từ dài nhất: ' + mangChuan[chiSoTuDaiNhat]);
+        document.write('<br><br>' + 'Từ dài nhất: ' + mangChuan[chiSoTuDaiNhat]);
     }
 </script>
 </html>
