@@ -5,8 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-<input type="number" readonly id="num1">
-<button onclick="">Nhấn để tạo ra số random</button>
+<input type="" id="so1">
+<button onclick="viTri1.getValue()">Nhấn để tạo ra số random</button>
 </body>
 <script>
     class DaySoVeSo {
@@ -14,7 +14,7 @@
             this.number = Math.floor(Math.random() * 10);
         }
         getValue() {
-            document.getElementById('num1').value = this.number;
+            document.getElementById('so1').value = this.number;
             return this.number;
         }
     }

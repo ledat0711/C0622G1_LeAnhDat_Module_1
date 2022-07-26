@@ -10,22 +10,21 @@
 <script>
     let tong = 0;
     let giaTien = 0;
-    let indexNuocUong = 0;
-    let arrGiaTien = [5000, 6000, 7000, 8000, 9000, 10000];
-    let arrBangGia = ["CaFe: 5000/1 ly", "Cam vắt: 6000/1 ly", "Nước ép cà rốt: 7000/1 ly",
+    let chiSoNuocUong = 0;
+    let mangGiaTien = [5000, 6000, 7000, 8000, 9000, 10000];
+    let mangBangGia = ["CaFe: 5000/1 ly", "Cam vắt: 6000/1 ly", "Nước ép cà rốt: 7000/1 ly",
         "Nước ép cà chua: 8000/1 ly", "Nước chanh: 9000/1 ly", "Nước dừa: 10000/1 ly"];
     do {
-        let indexNuocUong = +prompt("1.Cafe \n 2.Cam vắt \n 3.Nước ép cà rốt \n " +
+        let chiSoNuocUong = +prompt("1.Cafe \n 2.Cam vắt \n 3.Nước ép cà rốt \n " +
             "4.Nước ép cà chua \n 5.Nước chanh \n 6.Nước dừa \n 7.Kết thúc đặt thức uống và tính tổng.");
-        if (indexNuocUong > 6) {
+        if (chiSoNuocUong > 6) {
             alert('Tổng tiền phải trả: ' + tong + 'VND');
             break;
         }
-        alert(arrBangGia[indexNuocUong - 1]);
-        let soLuong = +prompt('Nhập số lượng');
-        giaTien = arrGiaTien[indexNuocUong - 1] * soLuong;
+        let soLuong = +prompt(mangBangGia[chiSoNuocUong - 1]+ '\nNhập số lượng: ');
+        giaTien = mangGiaTien[chiSoNuocUong - 1] * soLuong;
         alert('Thành tiền: ' + giaTien + ' VND');
         tong += giaTien;
-    } while (indexNuocUong < 7);
+    } while (chiSoNuocUong < 7);
 </script>
 </html>

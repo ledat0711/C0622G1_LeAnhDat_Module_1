@@ -27,32 +27,32 @@
 </body>
 <script>
     // Bài 3: Viết hàm tìm giá trị lớn nhất, nhỏ nhất trong mảng 2 chiều
-    let array = [
+    let mang = [
         [3, 4, 5],
         [6, 7, 8],
         [9, 10, 11]
     ];
-    max(array);
-    min(array);
+    max(mang);
+    min(mang);
 
-    function max(arr) {
-        let newMang = [];
-        for (let k of arr) {
+    function max(mangBenTrong1) {
+        let mangMoi = [];
+        for (let k of mangBenTrong1) {
             for (let l of k) {
-                newMang.push(l);
+                mangMoi.push(l);
             }
         }
-        document.write('Giá trị lớn nhất: ' + Math.max(...newMang));
+        document.write('Giá trị lớn nhất: ' + Math.max(...mangMoi));
     }
 
-    function min(arr) {
-        let newMang = [];
-        for (let k of arr) {
+    function min(mangBenTrong2) {
+        let mangMoi = [];
+        for (let k of mangBenTrong2) {
             for (let l of k) {
-                newMang.push(l);
+                mangMoi.push(l);
             }
         }
-        document.write('<br>Giá trị nhỏ nhất: ' + Math.min(...newMang));
+        document.write('<br>Giá trị nhỏ nhất: ' + Math.min(...mangMoi));
     }
 </script>
 </html>
