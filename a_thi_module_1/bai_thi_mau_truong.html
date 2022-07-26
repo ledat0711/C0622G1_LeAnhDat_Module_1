@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="ketQua"></p>
+<input type="button" onclick="addHangXe()" value="thêm thêm ">
+</body>
+<script>
+    class XeMay {
+        constructor(hangXe, chuSoHuu) {
+            this.hangXe = hangXe;
+            this.chuSoHuu = chuSoHuu;
+        }
+
+        setHangXe(value) {
+            this.hangXe = value;
+        }
+
+        setChuSoHuu(value) {
+            this.chuSoHuu = value;
+        }
+
+        getHangXe() {
+            return this.hangXe;
+        }
+
+        getChuSoHuu() {
+            return this.chuSoHuu;
+        }
+    }
+
+    let ketQua = [];
+    let xeMay1 = new XeMay("honda", "truong");
+    let xeMay2 = new XeMay("honda", "ccuong");
+    ketQua.push(xeMay1, xeMay2);
+
+    function xeXe(list) {
+        let conten = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <td>stt</td>\n' +
+            '        <td>hang xe</td>\n' +
+            '        <td>chủ sở hữu</td>\n' +
+            '        <td>Xóa</td>\n' +
+            '        <td>Sửa</td>\n' +
+            '    </tr>';
+
+        for (let i = 0; i < list.length; i++) {
+            conten += '<tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + list[i].getHangXe() + '</td>\n' +
+                '        <td>' + list[i].getChuSoHuu() + '</td>\n' +
+                '        <td><input type="button" onclick="xoaHangXe('+i+')" value="Xóa"></td>\n' +
+                '        <td><input type="button" onclick="editHangXe('+i+')" value="Sửa"></td>\n' +
+                '    </tr>'
+        }
+        conten += '</table>';
+        document.getElementById("ketQua").innerHTML = conten;
+    }
+
+    xeXe(ketQua);
+
+    function addHangXe() {
+        let add = prompt("nhập vào hãng xe mới");
+        let hang = prompt("nhập vào hãng xe mới");
+        let xeMoi = new XeMay(add, hang);
+        ketQua.push(xeMoi);
+        xeXe(ketQua);
+    }
+    function xoaHangXe(index) {
+        ketQua.splice(index,1);
+        xeXe(ketQua);
+    }
+    function editHangXe(index) {
+        let newPro=prompt("nhập lại hãng xe bạn muốn");
+        let newPro1=prompt("nhập lại tên bạn muốn");
+        let xeMoi= new XeMay(newPro,newPro1);
+        ketQua.splice(index,1,xeMoi);
+        xeXe(ketQua);
+    }
+</script>
+</html>
