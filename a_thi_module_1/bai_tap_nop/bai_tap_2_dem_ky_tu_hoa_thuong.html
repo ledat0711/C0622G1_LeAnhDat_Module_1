@@ -9,8 +9,10 @@
 </body>
 <script>
     let chuoi2 = prompt('Nhập một chuỗi: ');
-    let mangTuChuoi2 = chuoi2.split('');
-    demChuHoaChuThuong(mangTuChuoi2);
+    let mang=chuoi2.split(/\s+/);
+    let chuoi3=mang.join('');
+    let mangTuChuoi3 = chuoi3.split("");
+    demChuHoaChuThuong(mangTuChuoi3);
 
     function demChuHoaChuThuong(mangBenTrong) {
         let mangSo = [];
