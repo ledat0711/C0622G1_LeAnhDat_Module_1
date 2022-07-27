@@ -8,6 +8,27 @@
 
 </body>
 <script>
+    let chuoi2 = prompt('Nhập một chuỗi: ');
+    let mangTuChuoi2 = chuoi2.split('');
+    demChuHoaChuThuong(mangTuChuoi2);
 
+    function demChuHoaChuThuong(mangBenTrong) {
+        let mangSo = [];
+        let demChuHoa = 0;
+        let demChuThuong = 0;
+        for (let i = 0; i < mangBenTrong.length; i++) {
+            if (mangBenTrong[i] === mangBenTrong[i].toUpperCase()) {
+                demChuHoa++;
+            } else if (mangBenTrong[i] === mangBenTrong[i].toLowerCase()) {
+                demChuThuong++;
+            }
+        }
+        mangSo.push(demChuHoa);
+        mangSo.push(demChuThuong);
+        document.write('Chuỗi: ' + chuoi2);
+        document.write('<br>[' + mangSo + ']');
+        document.write('<br>' + demChuHoa + ' ký tự in hoa');
+        document.write('<br>' + demChuThuong + ' ký tự thường');
+    }
 </script>
 </html>
