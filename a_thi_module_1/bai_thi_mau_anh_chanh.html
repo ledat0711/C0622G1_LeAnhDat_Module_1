@@ -50,19 +50,19 @@
     }
     // định nghĩa hàm hiện thị
     function display(danhSach) {
-        let tableString ='<table border="1">\n' +
-            '    <tr>\n' +
-            '        <th>STT</th>\n' +
-            '        <th>BKS</th>\n' +
-            '        <th>Chủ sở hữu</th>\n' +
-            '        <th>Hãng xe</th>\n' +
+        let tableString ='<table border="1">' +
+            '    <tr>' +
+            '        <th>STT</th>' +
+            '        <th>BKS</th>' +
+            '        <th>Chủ sở hữu</th>' +
+            '        <th>Hãng xe</th>' +
             '    </tr>';
         for (let i = 0; i <danhSach.length ; i++) {
-            tableString +='<tr>\n' +
-                '        <td>'+(i+1)+'</td>\n' +
-                '        <td>'+danhSach[i].getBienKS()+'</td>\n' +
-                '        <td>'+danhSach[i].getChuSoHuu()+'</td>\n' +
-                '        <td>'+danhSach[i].getHangXe()+'</td>\n' +
+            tableString +='<tr>' +
+                '        <td>'+(i+1)+'</td>' +
+                '        <td>'+danhSach[i].getBienKS()+'</td>' +
+                '        <td>'+danhSach[i].getChuSoHuu()+'</td>' +
+                '        <td>'+danhSach[i].getHangXe()+'</td>' +
                 '    </tr>';
         }
         tableString += '</table>';

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="them()">Thêm mới</button>
+<button onclick="daSapXep()">Sắp xếp theo giá tăng dần</button>
+<p id="inRa"></p>
+</body>
+<script>
+    class MayTinh {
+        constructor(maSoMay, tenMay, tenHang, giaBan) {
+            this.maSoMay = maSoMay;
+            this.tenMay = tenMay;
+            this.tenHang = tenHang;
+            this.giaBan = giaBan;
+        }
+
+        setMaSoMay(maSoTrongClass) {
+            this.maSoMay = maSoTrongClass;
+        }
+
+        setTenMay(tenMayTrongClass) {
+            this.tenMay = tenMayTrongClass;
+        }
+
+        setTenHang(tenHangTrongClass) {
+            this.tenHang = tenHangTrongClass;
+        }
+
+        setGiaBan(giaBanTrongClass) {
+            this.giaBan = giaBanTrongClass;
+        }
+
+        getMaSoMay() {
+            return this.maSoMay;
+        }
+
+        getTenMay() {
+            return this.tenMay;
+        }
+
+        getTenHang() {
+            return this.tenHang;
+        }
+
+        getGiaBan() {
+            return this.giaBan;
+        }
+
+        toString() {
+            alert('Máy tính: ' + this.tenMay + '\nMã máy: ' + this.maSoMay +
+                '\nHãng sản xuất: ' + this.tenHang+ '\nCó giá bán: '+this.giaBan);
+        }
+    }
+
+    let may1= new MayTinh('GH456','Asus ROG','ASUSTeK Computer Inc',25000000);
+    let may2= new MayTinh('AB123','HP Envy','HP Development Company',20000000);
+
+    let danhSachMay=[may1,may2];
+    hienThi(danhSachMay);
+    function them() {
+        let maMayMoi = prompt('Nhập mã máy');
+        let tenMayMoi = prompt('Nhập tên máy');
+        let tenHangMoi= prompt('Nhập tên hãng');
+        let giaBanMoi = +prompt('Nhập giá bán');
+        let mayMoi = new MayTinh(maMayMoi, tenMayMoi, tenHangMoi, giaBanMoi);
+        danhSachMay.push(mayMoi);
+        hienThi(danhSachMay);
+    }
+
+    function hienThi(danhSachHienThi) {
+        let bangInRa = "";
+        bangInRa += '<table border="1">' + '<tr>' +
+            '<th>STT</th>' +
+            '<th>Mã máy</th>' +
+            '<th>Tên máy</th>' +
+            '<th>Tên hãng sản xuất</th>' +
+            '<th>Giá bán</th>' +
+            '</tr>';
+        for (let i = 0; i < danhSachHienThi.length; i++) {
+            bangInRa += '<tr>' +
+                '<td>' + (i + 1) + '</td>' +
+                '<td>' + danhSachHienThi[i].getMaSoMay() + '</td>' +
+                '<td>' + danhSachHienThi[i].getTenMay() + '</td>' +
+                '<td>' + danhSachHienThi[i].getTenHang() + '</td>' +
+                '<td>' + danhSachHienThi[i].getGiaBan() + '</td>' +
+                '</tr>';
+        }
+        bangInRa += '</table>';
+        document.getElementById('inRa').innerHTML = bangInRa;
+    }
+
+    function sapXep(danhSachHienThi) {
+        danhSachHienThi.sort(function(a, b) {
+            return parseFloat(a.giaBan) - parseFloat(b.giaBan);
+        });
+        let bangInRa = "";
+        bangInRa += '<table border="1">' + '<tr>' +
+            '<th>STT</th>' +
+            '<th>Mã máy</th>' +
+            '<th>Tên máy</th>' +
+            '<th>Tên hãng sản xuất</th>' +
+            '<th>Giá bán</th>' +
+            '</tr>';
+        for (let i = 0; i < danhSachHienThi.length; i++) {
+            bangInRa += '<tr>' +
+                '<td>' + (i + 1) + '</td>' +
+                '<td>' + danhSachHienThi[i].getMaSoMay() + '</td>' +
+                '<td>' + danhSachHienThi[i].getTenMay() + '</td>' +
+                '<td>' + danhSachHienThi[i].getTenHang() + '</td>' +
+                '<td>' + danhSachHienThi[i].getGiaBan() + '</td>' +
+                '</tr>';
+        }
+        bangInRa += '</table>';
+        document.getElementById('inRa').innerHTML = bangInRa;
+    }
+
+    function daSapXep() {
+        sapXep(danhSachMay);
+    }
+</script>
+</html>

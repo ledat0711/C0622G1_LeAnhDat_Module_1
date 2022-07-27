@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function nhapMangSoNguyen(){
+        let n = +prompt('Nhập chiều dài của mảng: ')
+        let mang=[];
+        let mangChan=[];
+        let tongChan=0
+        let mangLe=[];
+        let tongLe=0;
+        for(let i=0; i<n; i++){
+            mang[i]=+prompt('Nhập phần tử mang['+i+']');
+            if(i%2===0){
+                mangChan.push(mang[i]);
+                tongChan+=mang[i];
+            }else if(i%2!==0){
+                mangLe.push(mang[i]);
+                tongLe+=mang[i];
+            }
+        }
+        document.write('Mảng có chiều dài: ' + mang.length);
+        document.write("<br>mang=["+mang.toString()+']');
+        document.write(' <br>( '+mangChan.join("+")+' )-( '+mangLe.join("+")+' )= '+(tongChan-tongLe));
+    }
+    nhapMangSoNguyen();
+</script>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="them()">Thêm mới</button>
+<button onclick="sapXep()">Sắp xếp theo tên chủ sở hữu</button>
+<p id="out"></p>
+</body>
+<script>
+    class XeMay {
+        constructor(bienSo, chuSoHuu, hangXe) {
+            this.bienSo = bienSo;
+            this.chuSoHuu = chuSoHuu;
+            this.hangXe = hangXe;
+        }
+
+        getBienSo() {
+            return this.bienSo;
+        }
+
+        getChuSoHuu() {
+            return this.chuSoHuu;
+        }
+
+        getHangXe() {
+            return this.hangXe;
+        }
+    }
+    let xe1 = new XeMay("43-C1 12343", "Phan B", "Yamaha");
+    let xe2 = new XeMay("43 D1 65432", "Thanh A", "King");
+    let danhSachXe = [xe1, xe2];
+    hienThi();
+    function them() {
+        let bienSoMoi = prompt('Nhập biển số xe');
+        let chuSoHuuMoi = prompt('Nhập tên chủ sở hữu');
+        let hangXeMoi= prompt('Nhập hãng xe');
+        let xeMoi= new XeMay(bienSoMoi, chuSoHuuMoi, hangXeMoi);
+        danhSachXe.push(xeMoi);
+        hienThi();
+    }
+
+    function sapXep() {
+        danhSachXe.sort(function sortNames(a, b) {
+            let item1 = a.chuSoHuu.split(/\s+/);
+            item1 = item1[item1.length - 1];
+            let item2 = b.chuSoHuu.split(/\s+/);
+            item2 = item2[item2.length - 1];
+            let arr1 = [item1, item2];
+            arr1.sort()
+            if (arr1.indexOf(item1) == 1) {
+                return 1;
+            } else {
+                return -1;
+            }
+        })
+        let bangInRa = "";
+        bangInRa += '<table border="1">' + '<tr>' +
+            '<th>STT</th>' +
+            '<th>Biển số</th>' +
+            '<th>Chủ sở hữu</th>' +
+            '<th>Hãng xe</th>' +
+            '</tr>';
+        for (let i = 0; i < danhSachXe.length; i++) {
+            bangInRa += '<tr>' +
+                '<td>' + (i + 1) + '</td>' +
+                '<td>' + danhSachXe[i].getBienSo() + '</td>' +
+                '<td>' + danhSachXe[i].getChuSoHuu() + '</td>' +
+                '<td>' + danhSachXe[i].getHangXe() + '</td>' +
+                '</tr>';
+        }
+        bangInRa += '</table>';
+        document.getElementById('out').innerHTML = bangInRa;
+    }
+
+    function hienThi() {
+        let bangInRa = "";
+        bangInRa += '<table border="1">' + '<tr>' +
+            '<th>STT</th>' +
+            '<th>Biển số</th>' +
+            '<th>Chủ sở hữu</th>' +
+            '<th>Hãng xe</th>' +
+            '</tr>';
+        for (let i = 0; i < danhSachXe.length; i++) {
+            bangInRa += '<tr>' +
+                '<td>' + (i + 1) + '</td>' +
+                '<td>' + danhSachXe[i].getBienSo() + '</td>' +
+                '<td>' + danhSachXe[i].getChuSoHuu() + '</td>' +
+                '<td>' + danhSachXe[i].getHangXe() + '</td>' +
+                '</tr>';
+        }
+        bangInRa += '</table>';
+        document.getElementById('out').innerHTML = bangInRa;
+    }
+</script>
+</html>
