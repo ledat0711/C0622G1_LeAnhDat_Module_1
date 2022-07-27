@@ -7,4 +7,28 @@
 <body>
 
 </body>
+<script>
+    let mangBanDau = [1, 5, 6, 13, 9, 12, 8, 0, 5, 1];
+    timSoFibo(mangBanDau);
+    function timSoFibo(mangBenTrong) {
+        let mangFiBo=[];
+        for (let i = 0; i < mangBenTrong.length; i++) {
+            if (xetFiBo(5 * mangBenTrong[i] * mangBenTrong[i] + 4) || xetFiBo(5 * mangBenTrong[i] * mangBenTrong[i] - 4)) {
+                mangFiBo.push(mangBenTrong[i]);
+            }
+        }
+        mangFiBo.sort(function (a, b) {
+            return a-b;
+        });
+        document.write('Mảng ban đầu: '+mangBenTrong+'<br>');
+        document.write('Mảng các số Fibonacci : '+mangFiBo);
+    }
+    function xetFiBo(soBenTrong) {
+        if (Math.sqrt(soBenTrong) === Math.floor(Math.sqrt(soBenTrong))) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
 </html>
