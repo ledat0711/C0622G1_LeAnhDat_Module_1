@@ -17,7 +17,8 @@
     function timSoFibo(mangBenTrong) {
         let mangFiBo = [];
         for (let i = 0; i < mangBenTrong.length; i++) {
-            if (xetFiBo(5 * mangBenTrong[i] * mangBenTrong[i] + 4) || xetFiBo(5 * mangBenTrong[i] * mangBenTrong[i] - 4)) {
+            if (xetFiBo(5 * mangBenTrong[i] * mangBenTrong[i] + 4) ||
+                xetFiBo(5 * mangBenTrong[i] * mangBenTrong[i] - 4)) {
                 mangFiBo.push(mangBenTrong[i]);
             }
         }
