@@ -17,8 +17,7 @@
     function timSoFibo(mangBenTrong) {
         let mangFiBo = [];
         for (let i = 0; i < mangBenTrong.length; i++) {
-            if (xetFiBo(5 * mangBenTrong[i] * mangBenTrong[i] + 4) ||
-                xetFiBo(5 * mangBenTrong[i] * mangBenTrong[i] - 4)) {
+            if (xetFiBo(mangBenTrong[i])) {
                 mangFiBo.push(mangBenTrong[i]);
             }
         }
@@ -30,7 +29,9 @@
     }
 
     function xetFiBo(soBenTrong) {
-        if (Math.sqrt(soBenTrong) === Math.floor(Math.sqrt(soBenTrong))) {
+        let bieuThuc1 = Math.sqrt(5 * soBenTrong * soBenTrong + 4);
+        let bieuThuc2 = Math.sqrt(5 * soBenTrong * soBenTrong - 4);
+        if ((bieuThuc1 === Math.floor(bieuThuc1)) || (bieuThuc2 === Math.floor(bieuThuc2))) {
             return true;
         } else {
             return false;
